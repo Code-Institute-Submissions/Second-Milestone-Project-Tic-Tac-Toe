@@ -41,6 +41,12 @@ body{
     letter-spacing: 2px;
 }
 
+.game-container{
+    height: 200px;
+    width: 200px;
+    border: solid, black 1px;
+}
+
 footer{
     position: fixed;
     bottom: 0;

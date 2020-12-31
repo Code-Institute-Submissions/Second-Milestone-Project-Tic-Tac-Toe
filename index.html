@@ -1,91 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tic-tact-toe</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-</head>
-<body>
-            <!---------------- Navigation bar and header of the pager ------------------>
-    <header>
-        <div class="header" id="header">
-            <div class="navbar">
-            <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><h1>t<span>i</span>c-t<span>a</span>c-t<span>o</span>e</h1></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link" href="#" data-target="gameRules" data-toggle="modal">rules</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#" data-target="#gameHistory" data-toggle="modal">history</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="https://www.youtube.com/watch?v=oOgIl4hZz8A">tic-tac-toe song <i class="fab fa-youtube"></i></a>
-                    </li>
-                </ul>
-                <div class="modal fade" id="gameRules" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-                </div>
-            </div>
-            </nav>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>tic-tact-toe</title>
+				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+					<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+					<link rel="preconnect" href="https://fonts.gstatic.com">
+						<link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
+                            <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+                            <script src="script.js"></script>
+						</head>
+						<body>
+							<!---------------- Navigation bar and header of the pager ------------------>
+							<header>
+								<div class="header" id="header">
+									<div class="navbar">
+										<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light">
+											<div class="container-fluid">
+												<a class="navbar-brand" href="#">
+													<h1>t<span>i</span>c-t<span>a</span>c-t<span>o</span>e
+													</h1>
+												</a>
+												<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+													<span class="navbar-toggler-icon"></span>
+												</button>
+												<div class="collapse navbar-collapse" id="navbarNav">
+													<ul class="navbar-nav">
+														<li class="nav-item">
+															<a class="nav-link" href="#gameRules" data-toggle="modal" data-target="gameRules">rules</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="#" data-target="#gameHistory" data-toggle="modal">history</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="https://www.youtube.com/watch?v=oOgIl4hZz8A">tic-tac-toe song 
+																<i class="fab fa-youtube"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+                                        </nav>
+                                    </div>
+                                </div>
+                                
+							</header>
+							<!-------------------tic-tac-toe play area---------------------->
+							<main>
+								<button class="switch background-switch" id="togBtn" type="checkbox">
+										<span class="slider"></span>
+										<span>light</span>
+										<span>dark</span>
+									</button>
+									<div class="container game-container col-4">
+										<div class="row">
+                                            <div column id="data-item"></div>
+                                            <div column id="data-item"></div>
+                                            <div column id="data-item"></div>
+                                            <div column id="data-item"></div>
+                                            <div column id="data-item"></div>
+                                            <div column id="data-item"></div>
+                                            <div column id="data-item"></div>
+                                            <div column id="data-item"></div>
+                                            <div column id="data-item"></div>
+										</div>
+                                    </div>
 
-            
-
-            </div>
-        </div>
-    </header>
-
-            <!-------------------tic-tac-toe play area---------------------->
-
-    <main>
-        <button class="switch background-switch" id="togBtn">
-            <input type="checkbox">
-            <span class="slider"></span>
-            <span>light</span>
-            <span>dark</span>
-        </button>
-        
-        <div class="container game-container col-4">
-            <div class="row">
-                <div id="data-item"></div>
-        </div>
-        </div>
-
-    </main>
-
-            <!---------------------Copyright------------------------------->
-
-    <footer>
-        <div class="fixed-footer">copyright 2021</div>
-    </footer>
-            <!------------------------JS Bootstrap script----------------->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-</body>
-</html>
+                                   
+								</main>
+								<!---------------------Copyright------------------------------->
+								<footer>
+									<div class="fixed-footer">copyright 2021</div>
+								</footer>
+								<!------------------------JS Bootstrap script----------------->
+								<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+							</body>
+						</html>
