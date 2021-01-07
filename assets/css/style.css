@@ -4,7 +4,7 @@ body{
 }
 
 .navbar{
-    background-color: pink;
+    background-color: black;
     width: 100%;
 }
 
@@ -15,12 +15,17 @@ body{
 #navbarNav a{
     float: right;
 }
-.navbar-light .navbar-brand span{
+
+.navbar-dark .navbar-brand {
+    color: white;
+}
+
+.navbar-dark .navbar-brand span{
     color:#ff0000;
 }
 
 #navbarNav .nav-link{
-    color: black;
+    color: white;
 }
 
 #navbarNav .nav-link:hover{
@@ -40,11 +45,27 @@ body{
     float: right;
     letter-spacing: 2px;
 }
+.board-container{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+}
+.game-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: repeat(3, 1fr) ;
+    grid-gap: 10px;
+    background-color: black;
+}
 
-.game-container{
+.cell{
     height: 200px;
     width: 200px;
-    border: solid, black 1px;
+    background-color: white;
+
 }
 
 footer{
