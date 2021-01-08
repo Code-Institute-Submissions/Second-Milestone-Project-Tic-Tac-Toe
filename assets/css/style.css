@@ -65,7 +65,48 @@ body{
     height: 200px;
     width: 200px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
+}
+
+.cell.x::before,
+.cell.x::after{
+    content: '';
+    width: 10%;
+    height: 95%;
+    background-color: black;
+    position: absolute;
+    
+}
+
+.cell.x::before{
+    transform: rotate(45deg);
+}
+
+.cell.x::after{
+    transform: rotate(-45deg);
+}
+
+.cell.o::before,
+.cell.o::after{
+    content: '';
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+}
+
+.cell.o::before{
+    width: 90%;
+    height: 90%;
+}
+
+.cell.o::after{
+    width: 70%;
+    height: 70%;
+    background-color: white;
 }
 
 footer{
