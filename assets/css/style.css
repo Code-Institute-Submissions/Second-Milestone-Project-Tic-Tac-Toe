@@ -69,7 +69,13 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
 
+}
+
+.cell.x,
+.cell.o{
+    cursor: not-allowed;
 }
 
 .cell.x::before,
