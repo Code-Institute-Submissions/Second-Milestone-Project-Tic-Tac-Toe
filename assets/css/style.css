@@ -4,7 +4,7 @@ body{
 }
 
 .navbar{
-    background-color: black;
+    background-color: pink;
     width: 100%;
 }
 
@@ -61,7 +61,7 @@ body{
     background-color: black;
 }
 
-.cell{
+.column{
     height: 200px;
     width: 200px;
     background-color: white;
@@ -73,13 +73,13 @@ body{
 
 }
 
-.cell.x,
-.cell.o{
+.column.x,
+.column.o{
     cursor: not-allowed;
 }
 
-.cell.x::before,
-.cell.x::after{
+.column.x::before,
+.column.x::after{
     content: '';
     width: 10%;
     height: 95%;
@@ -88,28 +88,28 @@ body{
     
 }
 
-.cell.x::before{
+.column.x::before{
     transform: rotate(45deg);
 }
 
-.cell.x::after{
+.column.x::after{
     transform: rotate(-45deg);
 }
 
-.cell.o::before,
-.cell.o::after{
+.column.o::before,
+.column.o::after{
     content: '';
     border-radius: 50%;
     background-color: red;
     position: absolute;
 }
 
-.cell.o::before{
+.column.o::before{
     width: 90%;
     height: 90%;
 }
 
-.cell.o::after{
+.column.o::after{
     width: 70%;
     height: 70%;
     background-color: white;
