@@ -1,15 +1,15 @@
 let x_class = 'x'
 let o_class = 'o'
-let columnElements = document.querySelectorAll('[data-column]');
+let cellElements = document.querySelectorAll('[data-cell]');
 let oTurn;
 
-columnElements.forEach(column => {
-    column.addEventListener('click', handleClick, {once:true})
+cellElements.forEach(column => {
+    cell.addEventListener('click', handleClick, {once:true})
 });
 
 function handleClick(e) {
     //mark
-let column = e.target;
+let cell = e.target;
 let currentClass;
 if (e == oTurn) {
     currentClass = o_class;
@@ -19,7 +19,7 @@ else {
 }
 
 
-drawStep(column, currentClass)
+drawStep(cell, currentClass)
 
 
     //swap turns
@@ -30,8 +30,8 @@ drawStep(column, currentClass)
     changeTurns()
 }
 
-function drawStep(column, currentClass) {
-    column.classList.add(currentClass)
+function drawStep(cell, currentClass) {
+    cell.classList.add(currentClass)
 }
 
 function changeTurns() {
