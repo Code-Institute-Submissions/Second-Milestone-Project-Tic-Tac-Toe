@@ -1,39 +1,41 @@
-let x_class = 'x'
-let o_class = 'o'
+let X_CLASS = 'x';
+let O_CLASS = 'o';
 let cellElements = document.querySelectorAll('[data-cell]');
-let oTurn;
+let circleTurn;
+//Event Hanlers
 
-cellElements.forEach(column => {
-    cell.addEventListener('click', handleClick, {once:true})
-});
-
-function handleClick(e) {
-    //mark
-let cell = e.target;
-let currentClass;
-if (e == oTurn) {
-    currentClass = o_class;
-}
-else {
-    currentClass = x_class;
+const handleClick = e => {
+  const  cell = e.target;
+  let activeClass;
+  if (circleTurn == true) {
+    activeClass = O_CLASS;
+} else {
+    activeClass = X_CLASS;
 }
 
+//show click
+drawClick(cell, activeClass);
 
-drawStep(cell, currentClass)
+//next turn
+
+nextTurn()
+};
 
 
-    //swap turns
-    //check for win
-    //check for drew
-    //rematch
-    //start new game 
-    changeTurns()
+//Event Listeners 
+
+cellElements.forEach(cell => {
+    cell.addEventListener('click', handleClick, { once:true })
+})
+
+
+//Function
+
+function drawClick(cell, activeClass) {
+    cell.classList.add(activeClass)
 }
 
-function drawStep(cell, currentClass) {
-    cell.classList.add(currentClass)
+function nextTurn() {
+    circleTurn = !circleTurn;
 }
 
-function changeTurns() {
-    oTurn= !oTurn;
-}
