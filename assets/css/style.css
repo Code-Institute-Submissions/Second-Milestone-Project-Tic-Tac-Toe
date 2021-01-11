@@ -4,7 +4,7 @@ body{
 }
 
 .navbar{
-    background-color: pink;
+    background-color: black;
     width: 100%;
 }
 
@@ -104,7 +104,8 @@ body{
     position: absolute;
 }
 
-.cell.o::before{
+.cell.o::before
+{
     width: 90%;
     height: 90%;
 }
@@ -114,6 +115,7 @@ body{
     height: 70%;
     background-color: white;
 }
+
 
 footer{
     position: fixed;
