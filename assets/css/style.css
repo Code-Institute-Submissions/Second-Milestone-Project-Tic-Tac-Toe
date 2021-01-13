@@ -7,7 +7,7 @@ body.black {
 }
 
 .navbar{
-    background-color: black;
+    background-color: pink;
     width: 100%;
 }
 
@@ -41,6 +41,9 @@ body.black .navbar button{
 
 #navbarNav .nav-link{
     color: white;
+}
+body.black #navbarNav .nav-link{
+    color: black;
 }
 
 #navbarNav .nav-link:hover{
