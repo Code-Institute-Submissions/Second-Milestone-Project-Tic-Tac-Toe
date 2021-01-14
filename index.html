@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                                     
-                                <div class="modal fade" id="gameRules" tabindex="-1" aria-hidden="true" role="dialog">
+                                <div class="modal rules-modal fade" id="gameRules" tabindex="-1" aria-hidden="true" role="dialog">
                                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                                 <div class="modal-content">
                                             <div class="modal-header">
@@ -88,7 +88,7 @@
                                             </div>
                                         </div>
                                 </div>
-                                <div class="modal fade" id="gameHistory" tabindex="-1" aria-hidden="true" role="dialog">
+                                <div class="modal history-modal fade" id="gameHistory" tabindex="-1" aria-hidden="true" role="dialog">
                                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                                 <div class="modal-content">
                                             <div class="modal-header">
@@ -114,7 +114,7 @@
                                             </div>
                                         </div>
                                 </div>
-                               <div class="modal fade" id="gameSong" tabindex="-1" aria-hidden="true" role="dialog">
+                               <div class="modal song-modal fade" id="gameSong" tabindex="-1" aria-hidden="true" role="dialog">
                                             <div class="modal-dialog modal modal-dialog-centered">
                                                 <div class="modal-content">
                                             <div class="modal-header">
@@ -136,7 +136,29 @@
                             <!-------------------tic-tac-toe play area---------------------->
                             
 							<main>
-                                <!---->
+
+                                <!------------------Start of the Gmae----------------->
+                                <div class="modal-background">
+                                <div class="modal start-modal fade" id="startGame">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+
+                                            </div>
+                                            <div class="modal-body">
+
+                                            </div>
+                                            <div class="modal-footer">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <div class="turns">'s turn</div>
+
+                                <!-------------The Game------------------------>
 								<input class="switch" id="togBtn" type="checkbox">
                                     <label class="background-switch" for="togBtn">
 										<span>light</span>
@@ -159,8 +181,8 @@
                                         </div>
                                   
                                 <div class="end-result" id="endResult">
-                                    <div class="game-result"></div>
-                                    <button id="newgameButton">new game </button>
+                                    <div class="game-result" id="gameResult"></div>
+                                    <button id="newgameButton">new players</button>
                                     <button id="rematchButton">rematch</button>
                                 </div>
                                    
