@@ -7,7 +7,7 @@ body.black {
 }
 
 .navbar{
-    background-color: pink;
+    background-color: black;
     width: 100%;
 }
 
@@ -27,7 +27,7 @@ body.black .navbar {
     color: white;
 }
 
-body.black .navbar-brand {
+body.black .navbar-dark .navbar-brand {
     color: black;
 }
 
