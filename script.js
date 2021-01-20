@@ -1,16 +1,15 @@
 let X_CLASS = 'x';
 let O_CLASS = 'o';
 let WIN_RESULT =[
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 1,2,],
+    [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
     [0, 4, 8],
     [2, 4, 6],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8]
 ];
-let noWinner = [0,1,2,3,4,5,6,7,8]
 let gameResult = document.querySelector('#gameResult');
 let gameResultText = document.querySelector('.game-result-text');
 let cellElements = document.querySelectorAll('[data-cell]');
@@ -25,26 +24,18 @@ const switchBox = document.getElementById('togBtn');
 //x and o event handler 
 const handleClick = function(e){
   const  cell = e.target;
-  let activeClass;
-  if (circleTurn == true) {
+  let activeClass = X_CLASS || O_CLASS;
+  if (circleTurn ) {
     activeClass = O_CLASS;
 } else {
     activeClass = X_CLASS;
 };
 
 if (checkWinner(activeClass)){
-    gameResult(false);
-} 
-
-function gameResult(noWinner){
-if (noWinner){
-    gameResultText.innerHTML = 'No winner to announce!'
+    
 } else {
-    gameResultText.innerHTML = 'The winner is '
+    
 }
-gameResultText.classList.add('show')
-};
-
 
 //show click
 drawClick(cell, activeClass);
@@ -58,7 +49,9 @@ nextTurn()
 
 checkWinner(activeClass);
 
-checkTie(activeClass);
+
+
+
 
 };
 
@@ -94,17 +87,10 @@ function nextTurn() {
 };
 
 function checkWinner(activeClass) {
-    return WIN_RESULT.some(function(result){
-        return result.every(function(index){
-            return cellElements[index].classList.contains(activeClass)
+    return WIN_RESULT.some(value => {
+        return value.every(index => {
+            return cellElements[index].classList.contains(activeClass) 
         })
     })
 };
-
-function checkTie() {
-    return noWinner.every(function(cell){
-        return cell.classList.contains(X_CLASS) || cell.classList.contains(O_CLASS)
-    })
-};
-
 
