@@ -10,6 +10,7 @@ let WIN_RESULT =[
     [1, 4, 7],
     [2, 5, 8]
 ];
+let noWinner = [1, 2, 3, 4, 5, 6, 7, 8];
 let gameResult = document.querySelector('#gameResult');
 let gameResultText = document.querySelector('.game-result-text');
 let cellElements = document.querySelectorAll('[data-cell]');
@@ -31,14 +32,17 @@ const handleClick = function(e){
     activeClass = X_CLASS;
 };
 
-if (checkWinner(activeClass)){
-    
-} else {
-    
-}
 
 //show click
 drawClick(cell, activeClass);
+
+
+if (checkWinner(activeClass)){
+    console.log('winner')
+} else {
+    checkTie(activeClass)
+    
+}
 
 //next turn
 
@@ -50,8 +54,9 @@ nextTurn()
 checkWinner(activeClass);
 
 
+//checking for a tie 
 
-
+checkTie(activeClass);
 
 };
 
@@ -94,3 +99,9 @@ function checkWinner(activeClass) {
     })
 };
 
+function checkTie(activeClass) {
+    return noWinner.every(value => {
+        return cellElements[index].classList.contains(activeClass)
+    })
+};
+console.log('tie')
