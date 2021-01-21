@@ -10,7 +10,7 @@ let WIN_RESULT = [
 	[1, 4, 7],
 	[2, 5, 8]
 ];
-let noWinner = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let noWinner = [ [0], [1], [2], [3], [4], [5], [6], [7], [8]];
 let gameResult = document.querySelector('#gameResult');
 let gameResultText = document.querySelector('.game-result-text');
 let cellElements = document.querySelectorAll('[data-cell]');
@@ -36,25 +36,23 @@ const handleClick = function(e) {
 	//show click
 	drawClick(cell, activeClass);
 
+    if (checkWinner(activeClass)) {
+       gameOver(false);
+    } else if (checkTie()){
+        gameOver(true);
+    }
 
-	
-	function gameOver() {
+     function gameOver(checkTie) {
 		if (checkTie) {
 			gameResultText.innerHTML = "No winner";
 		} else if (checkWinner) {
 			gameResultText.innerHTML = "Congrats .....! ...... win!";
-		} else {
-			gameResultText.innerHTML = "Is there a winner? &#128517";
-		}
+        } else {
+            gameResultText.innerHTML = "Did you heck the system? &#128561" ;
+        }
+       
 	}
-
-    if (checkWinner(activeClass)) {
-		gameOver(false);
-	} else if (checkTie) {
-        gameOver(true);
-    }
-
-
+    
 	//next turn
 
 	nextTurn();
@@ -114,8 +112,8 @@ function checkWinner(activeClass) {
 	});
 }
 
-function checkTie() {
-	return [...cellElements].every(function(cell) {
-		return cell.classList.contains(X_CLASS) || cell.classList.contains(O_CLASS);
+function checkTie(activeClass) {
+	return noWinner.every(function(index) {
+		return cellElements[index].classList.contains(X_CLASS) || cellElements[index].classList.contains(O_CLASS);
 	});
 }
