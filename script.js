@@ -52,7 +52,7 @@ const handleClick = function(e) {
         } else {
             gameResultText.innerHTML = "Did you heck the system? &#128561" ;
         }
-        gameResult.style.visibility = "visible";
+        gameResult.classList.add('show');
     }
     
     
