@@ -11,16 +11,16 @@ let WIN_RESULT = [
 	[2, 5, 8]
 ];
 let noWinner = [ [0], [1], [2], [3], [4], [5], [6], [7], [8]];
-let gameResult = document.querySelector('#gameResult');
+let gameResult = document.querySelector('.game-result');
 let gameResultText = document.querySelector('.game-result-text');
 let cellElements = document.querySelectorAll('[data-cell]');
 let circleTurn;
-
+let resultTrigger;
+const switchBox = document.getElementById('togBtn');
 
 //Event Hanlers------------------------------------------------
 
-//background color event handler 
-const switchBox = document.getElementById('togBtn');
+
 
 //x and o event handler 
 const handleClick = function(e) {
@@ -44,14 +44,18 @@ const handleClick = function(e) {
 
      function gameOver(checkTie) {
 		if (checkTie) {
-			gameResultText.innerHTML = "No winner";
+            gameResultText.innerHTML = "No winner";
+            
 		} else if (checkWinner) {
-			gameResultText.innerHTML = "Congrats .....! ...... win!";
+            gameResultText.innerHTML = "Congrats .....! ...... win!";
+            
         } else {
             gameResultText.innerHTML = "Did you heck the system? &#128561" ;
         }
-       
-	}
+        gameResult.style.visibility = "visible";
+    }
+    
+    
     
 	//next turn
 
@@ -117,3 +121,4 @@ function checkTie(activeClass) {
 		return cellElements[index].classList.contains(X_CLASS) || cellElements[index].classList.contains(O_CLASS);
 	});
 }
+
