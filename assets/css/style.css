@@ -196,9 +196,12 @@ body.black .cell.o::after{
     width: 100%;
     height: 100%;
     background-color: rgba(106, 114, 117, 0.5);
-    visibility: hidden;
+    display: none;
 }
 
+.game-result.show {
+    display: flex;
+}
 
 
 footer{
