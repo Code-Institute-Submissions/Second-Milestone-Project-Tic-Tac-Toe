@@ -15,11 +15,19 @@ let gameResult = document.querySelector('.game-result');
 let gameResultText = document.querySelector('.game-result-text');
 let cellElements = document.querySelectorAll('[data-cell]');
 let circleTurn;
-let resultTrigger;
+
 const switchBox = document.getElementById('togBtn');
 
-//Event Hanlers------------------------------------------------
 
+
+
+
+//Event Hanlers------------------------------------------------
+$(document).ready(function() {
+    $("#submitBtn").click(function() {
+        $("#startingPage").css('visibility' , 'hidden');
+    });
+});
 
 
 //x and o event handler 
@@ -74,6 +82,8 @@ const handleClick = function(e) {
 };
 
 //Event Listeners------------------------------------------------
+
+
 
 //background color
 
