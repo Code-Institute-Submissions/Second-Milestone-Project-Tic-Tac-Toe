@@ -138,18 +138,31 @@
 							<main>
 
                                 <!------------------Start of the Gmae----------------->
-                               <div class="container starting-page-container" id="startingPage" >
-                                   <div class="row form-row" style="background-color: aquamarine;">
-                                       <p>Welcome to tic-tac-toe</p> 
-                                       <p>Please enter player's name</p>
-                                       <form class="players-form" id="playersForm">
-                                           <label>player x</label><br>
-                                           <input type="text" id="playerX" name="playerX" required><br>
-                                           <label>player o</label><br>
-                                           <input type="text" id="playerO" name="playerO" required><br>
+                               <div class="modal starting-page-modal fade" id="startingPage">
+                                   <div class="modal-dialog modal modal-dialog-centered">
+                                       <div class="modal-header">
+                                           <h5 class="modal-title">welcome to tic-tac-toe</h5><br>
+                                           <p>Please enter player's name</p>
+                                        </div>
+                                       <div class="modal-body" id="formModal">
+                                            <form class="players-form" id="playersForm">
+                                                <div class="form-group">
+                                                <label>player x</label><br>
+                                                <input type="text" id="playerX" name="playerX" required>
+                                                </div>
+                                                <div class="form-group">
+                                                <label>player o</label><br>
+                                                <input type="text" id="playerO" name="playerO" required>
+                                                </div>
+                                            </form>
+                                       </div>
+                                           <div class="modal-footer">
+                                           
                                            <button type="submit"  id="submitBtn">Let's play</button>
-                                       </form>
-                                   </div>
+                                        </div>
+                                       
+                                       
+                                    </div>
                                </div>
 
                             <!-------------The Game------------------------>
