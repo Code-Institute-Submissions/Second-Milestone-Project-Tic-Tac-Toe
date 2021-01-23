@@ -138,30 +138,25 @@
 							<main>
 
                                 <!------------------Start of the Gmae----------------->
-                                <div class="modal-background">
-                                <div class="modal start-modal fade" id="startGame">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
+                               <div class="container starting-page-container" id="startingPage" >
+                                   <div class="row form-row" style="background-color: aquamarine;">
+                                       <p>Welcome to tic-tac-toe</p> 
+                                       <p>Please enter player's name</p>
+                                       <form class="players-form" id="playersForm">
+                                           <label>player x</label><br>
+                                           <input type="text" id="playerX" name="playerX" required><br>
+                                           <label>player o</label><br>
+                                           <input type="text" id="playerO" name="playerO" required><br>
+                                           <button type="submit"  id="submitBtn">Let's play</button>
+                                       </form>
+                                   </div>
+                               </div>
 
-                                            </div>
-                                            <div class="modal-body">
-                                                <label for="player1">player X</label>
-                                                <input type="text" placeholder="enter player x name" name="player1">
-                                                <label for="player2">player O</label>
-                                                <input type="text" placeholder="enter player o name" name="player2">
-                                            </div>
-                                            <div class="modal-footer">
+                            <!-------------The Game------------------------>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
+                                <div class="turns" id="playersTurn">'s turn</div>
 
-                                <div class="turns">'s turn</div>
-
-                                <!-------------The Game------------------------>
+                                
 								<input class="switch" id="togBtn" type="checkbox">
                                     <label class="background-switch" for="togBtn">
 										<span>light</span>
