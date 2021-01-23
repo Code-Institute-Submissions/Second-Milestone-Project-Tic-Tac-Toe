@@ -7,7 +7,7 @@ body.black {
 }
 /*------------------------------NAVBAR---------------------------------*/
 .navbar{
-    background-color: black;
+    background-color: pink;
     width: 100%;
 }
 
@@ -93,7 +93,9 @@ body.black label .slider {
     background-color: black;
 }
 
-
+.starting-page-modal  {
+    display: flex;
+}
 
 .board-container{
     
