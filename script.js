@@ -15,19 +15,25 @@ let gameResult = document.querySelector('.game-result');
 let gameResultText = document.querySelector('.game-result-text');
 let cellElements = document.querySelectorAll('[data-cell]');
 let circleTurn;
+let playersForm = document.getElementById('playersForm');
+
+let playerX = document.getElementById('playerX').value;
+let playerO = document.getElementById('playerO').value;
+
+let submit = document.getElementById('submitBtn').onsubmit;
 
 const switchBox = document.getElementById('togBtn');
 
 
 
-
+/*$(document).ready(function() {
+    $("#submitBtn").click(function() {
+        $("#startingPage").css('visibility: hidden');
+    });
+    });*/
 
 //Event Hanlers------------------------------------------------
-$(document).ready(function() {
-    $("#submitBtn").click(function() {
-        $("#startingPage").css('visibility' , 'hidden');
-    });
-});
+
 
 
 //x and o event handler 
@@ -91,6 +97,10 @@ switchBox.addEventListener('change', function() {
 	document.body.classList.toggle('black');
 });
 
+$(window).on('load', function() {
+    $('#startingPage').modal('show');
+});
+
 //x and o 
 cellElements.forEach(function(cell) {
 	cell.addEventListener('click', handleClick, {
@@ -110,6 +120,10 @@ function changeColor() {
 
 
 //x and o function 
+
+
+
+
 function drawClick(cell, activeClass) {
 	cell.classList.add(activeClass);
 }
