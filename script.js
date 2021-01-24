@@ -15,12 +15,12 @@ let gameResult = document.querySelector('.game-result');
 let gameResultText = document.querySelector('.game-result-text');
 let cellElements = document.querySelectorAll('[data-cell]');
 let circleTurn;
-let playersForm = document.getElementById('playersForm');
+let playersForm = document.getElementById('formModal');
 
-let playerX = document.getElementById('playerX').value;
-let playerO = document.getElementById('playerO').value;
+let playerX = document.getElementById('playerX');
+let playerO = document.getElementById('playerO');
 
-let submit = document.getElementById('submitBtn').onsubmit;
+
 
 const switchBox = document.getElementById('togBtn');
 
@@ -101,6 +101,30 @@ $(window).on('load', function() {
     $('#startingPage').modal('show');
 });
 
+playersForm.addEventListener('submit', (e) => {
+    let errorMessages = [];
+    if(playerX.value === '' ) {
+        errorMessages.push( "Player's name is required")
+    } else if(playerO.value === '' ) {
+        errorMessages.push( "Player's name is required")
+    } 
+
+    if(errorMessages.length > 0) {     
+     e.preventDefault();
+     document.getElementById('error').innerText = errorMessages;
+};
+});
+
+document.querySelector('#submitBtn').addEventListener('click', function() {
+    document.querySelector('#startingPage').modal(hidden);
+});
+
+/*$('#submitBtn').click(function() {
+	$('#startingPage').modal('hide');
+});*/
+
+
+
 //x and o 
 cellElements.forEach(function(cell) {
 	cell.addEventListener('click', handleClick, {
@@ -114,7 +138,7 @@ cellElements.forEach(function(cell) {
 
 //background color
 function changeColor() {
-	document.body.classList.toggle('dark');
+	document.body.classList.toggle('black');
 }
 
 
