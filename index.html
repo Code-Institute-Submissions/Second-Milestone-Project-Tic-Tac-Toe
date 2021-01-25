@@ -1,216 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>tic-tact-toe</title>
-				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-					<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
-					<link rel="preconnect" href="https://fonts.gstatic.com">
-						<link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
-                            <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-                            <script src="script.js" defer></script>
-						</head>
-						<body>
-							<!---------------- Navigation bar and header of the pager ------------------>
-							<header>
-								<div class="header" id="header">
-									<div class="navbar">
-										<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark">
-											<div class="container-fluid">
-												<a class="navbar-brand" href="#">
-													<h1>t<span>i</span>c-t<span>a</span>c-t<span>o</span>e
-													</h1>
-												</a>
-												<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-													<span class="navbar-toggler-icon"></span>
-												</button>
-												<div class="collapse navbar-collapse" id="navbarNav">
-													<ul class="navbar-nav">
-														<li class="nav-item">
-															<a class="nav-link" href="#gameRules" data-toggle="modal" data-target="#gameRules" >rules</a>
-														</li>
-														<li class="nav-item">
-															<a class="nav-link" href="#gameHistory" data-toggle="modal" data-target="#gameHistory">history</a>
-														</li>
-														<li class="nav-item">
-															<a class="nav-link" href="#gameSong" data-toggle="modal" data-target="#gameSong">tic-tac-toe song 
-																<i class="fab fa-youtube"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-                                        </nav>
-                                    </div>
-                                </div>
-                                    
-                                <div class="modal rules-modal fade" id="gameRules" tabindex="-1" aria-hidden="true" role="dialog">
-                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                                <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">tic-tac-toe rules</h5>
-                                                <button class="btn-close" type="button" data-dismiss="modal" aria-label="close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>You probably already know how to play Tic-Tac-Toe. It's a really simple game, right? That's what most people think. But if you really wrap your brain around it, you'll discover that Tic-Tac-Toe isn't quite as simple as you think!
 
-                                                    Tic-Tac -Toe (along with a lot of other games) involves looking ahead and trying to figure out what the person playing against you might do next.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tact-toe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="script.js" defer></script>
+</head>
 
-                                                </p>
-                                                <p>
-                                                    RULES FOR TIC-TAC-TOE
+<body>
+    <!---------------- Navigation bar and header of the pager ------------------>
+    <header>
+        <div class="header" id="header">
+            <div class="navbar">
+                <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <h1>t<span>i</span>c-t<span>a</span>c-t<span>o</span>e
+                            </h1>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#gameRules" data-toggle="modal"
+                                        data-target="#gameRules">rules</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#gameHistory" data-toggle="modal"
+                                        data-target="#gameHistory">history</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#gameSong" data-toggle="modal"
+                                        data-target="#gameSong">tic-tac-toe song
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
 
-                                                    1. The game is played on a grid that's 3 squares by 3 squares.
+        <div class="modal rules-modal fade" id="gameRules" tabindex="-1" aria-hidden="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">tic-tac-toe rules</h5>
+                        <button class="btn-close" type="button" data-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>You probably already know how to play Tic-Tac-Toe. It's a really simple game, right? That's
+                            what most people think. But if you really wrap your brain around it, you'll discover that
+                            Tic-Tac-Toe isn't quite as simple as you think!
 
-                                                    2. You are X, your friend (or the computer in this case) is O. Players take turns putting their marks in empty squares.
+                            Tic-Tac -Toe (along with a lot of other games) involves looking ahead and trying to figure
+                            out what the person playing against you might do next.
 
-                                                    3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.
+                        </p>
+                        <p>
+                            RULES FOR TIC-TAC-TOE
 
-                                                    4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
-                                                </p>
-                                                <p>
-                                                    HOW CAN I WIN AT TIC-TAC-TOE?
-                                                    To beat the computer (or at least tie), you need to make use of a little bit of strategy. Strategy means figuring out what you need to do to win.
+                            1. The game is played on a grid that's 3 squares by 3 squares.
 
-                                                    Part of your strategy is trying to figure out how to get three Xs in a row. The other part is trying to figure out how to stop the computer from getting three Os in a row.
+                            2. You are X, your friend (or the computer in this case) is O. Players take turns putting
+                            their marks in empty squares.
 
-                                                    After you put an X in a square, you start looking ahead. Where's the best place for your next X? You look at the empty squares and decide which ones are good choices—which ones might let you make three Xs in a row.
+                            3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the
+                            winner.
 
-                                                    You also have to watch where the computer puts its O. That could change what you do next. If the computer gets two Os in a row, you have to put your next X in the last empty square in that row, or the computer will win. You are forced to play in a particular square or lose the game.
+                            4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the
+                            game ends in a tie.
+                        </p>
+                        <p>
+                            HOW CAN I WIN AT TIC-TAC-TOE?
+                            To beat the computer (or at least tie), you need to make use of a little bit of strategy.
+                            Strategy means figuring out what you need to do to win.
 
-                                                    If you always pay attention and look ahead, you'll never lose a game of Tic-Tac-Toe. You may not win, but at least you'll tie.
-                                                </p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input class="button default-button" data-dismiss="modal" value="let's play">
-                                            </div>
-                                            </div>
-                                        </div>
-                                </div>
-                                <div class="modal history-modal fade" id="gameHistory" tabindex="-1" aria-hidden="true" role="dialog">
-                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                                <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">tic-tac-toe history</h5>
-                                                <button class="btn-close" type="button" data-dismiss="modal" aria-label="close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p> 
-                                                    Games played on three-in-a-row boards can be traced back to ancient Egypt,[5] where such game boards have been found on roofing tiles dating from around 1300 BCE.[6]
+                            Part of your strategy is trying to figure out how to get three Xs in a row. The other part
+                            is trying to figure out how to stop the computer from getting three Os in a row.
 
-                                                    An early variation of tic-tac-toe was played in the Roman Empire, around the first century BC. It was called terni lapilli (three pebbles at a time) and instead of having any number of pieces, each player only had three, thus they had to move them around to empty spaces to keep playing.[7] The game's grid markings have been found chalked all over Rome. Another closely related ancient game is three men's morris which is also played on a simple grid and requires three pieces in a row to finish,[8] and Picaria, a game of the Puebloans.
+                            After you put an X in a square, you start looking ahead. Where's the best place for your
+                            next X? You look at the empty squares and decide which ones are good choices—which ones
+                            might let you make three Xs in a row.
 
-                                                    The different names of the game are more recent. The first print reference to "noughts and crosses" (nought being an alternative word for zero), the British name, appeared in 1858, in an issue of Notes and Queries.[9] The first print reference to a game called "tick-tack-toe" occurred in 1884, but referred to "a children's game played on a slate, consisting in trying with the eyes shut to bring the pencil down on one of the numbers of a set, the number hit being scored". "Tic-tac-toe" may also derive from "tick-tack", the name of an old version of backgammon first described in 1558. The US renaming of "noughts and crosses" as "tic-tac-toe" occurred in the 20th century.[10]
+                            You also have to watch where the computer puts its O. That could change what you do next. If
+                            the computer gets two Os in a row, you have to put your next X in the last empty square in
+                            that row, or the computer will win. You are forced to play in a particular square or lose
+                            the game.
 
-                                                    In 1952, OXO (or Noughts and Crosses), developed by British computer scientist Sandy Douglas for the EDSAC computer at the University of Cambridge, became one of the first known video games.[11][12] The computer player could play perfect games of tic-tac-toe against a human opponent.[11]
+                            If you always pay attention and look ahead, you'll never lose a game of Tic-Tac-Toe. You may
+                            not win, but at least you'll tie.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <input class="button default-button" data-dismiss="modal" value="let's play">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal history-modal fade" id="gameHistory" tabindex="-1" aria-hidden="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">tic-tac-toe history</h5>
+                        <button class="btn-close" type="button" data-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Games played on three-in-a-row boards can be traced back to ancient Egypt,[5] where such
+                            game boards have been found on roofing tiles dating from around 1300 BCE.[6]
 
-                                                    In 1975, tic-tac-toe was also used by MIT students to demonstrate the computational power of Tinkertoy elements. The Tinkertoy computer, made out of (almost) only Tinkertoys, is able to play tic-tac-toe perfectly.[13] It is currently on display at the Museum of Science, Boston.
-                                                </p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input class="button default-button" data-dismiss="modal" value="close">
-                                            </div>
-                                            </div>
-                                        </div>
-                                </div>
-                               <div class="modal song-modal fade" id="gameSong" tabindex="-1" aria-hidden="true" role="dialog">
-                                            <div class="modal-dialog modal modal-dialog-centered">
-                                                <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">have a break</h5>
-                                                <button class="btn-close" type="button" data-dismiss="modal" aria-label="close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="embed-responsive embed-responsive-8by5"></div>
-                                                <iframe id="songVideo" calss="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/oOgIl4hZz8A" max-width="560" max-height="315" allowfullscreen></iframe>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input class="button default-button" data-dismiss="modal" value="close">
-                                            </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </header>
+                            An early variation of tic-tac-toe was played in the Roman Empire, around the first century
+                            BC. It was called terni lapilli (three pebbles at a time) and instead of having any number
+                            of pieces, each player only had three, thus they had to move them around to empty spaces to
+                            keep playing.[7] The game's grid markings have been found chalked all over Rome. Another
+                            closely related ancient game is three men's morris which is also played on a simple grid and
+                            requires three pieces in a row to finish,[8] and Picaria, a game of the Puebloans.
+
+                            The different names of the game are more recent. The first print reference to "noughts and
+                            crosses" (nought being an alternative word for zero), the British name, appeared in 1858, in
+                            an issue of Notes and Queries.[9] The first print reference to a game called "tick-tack-toe"
+                            occurred in 1884, but referred to "a children's game played on a slate, consisting in trying
+                            with the eyes shut to bring the pencil down on one of the numbers of a set, the number hit
+                            being scored". "Tic-tac-toe" may also derive from "tick-tack", the name of an old version of
+                            backgammon first described in 1558. The US renaming of "noughts and crosses" as
+                            "tic-tac-toe" occurred in the 20th century.[10]
+
+                            In 1952, OXO (or Noughts and Crosses), developed by British computer scientist Sandy Douglas
+                            for the EDSAC computer at the University of Cambridge, became one of the first known video
+                            games.[11][12] The computer player could play perfect games of tic-tac-toe against a human
+                            opponent.[11]
+
+                            In 1975, tic-tac-toe was also used by MIT students to demonstrate the computational power of
+                            Tinkertoy elements. The Tinkertoy computer, made out of (almost) only Tinkertoys, is able to
+                            play tic-tac-toe perfectly.[13] It is currently on display at the Museum of Science, Boston.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <input class="button default-button" data-dismiss="modal" value="close">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal song-modal fade" id="gameSong" tabindex="-1" aria-hidden="true" role="dialog">
+            <div class="modal-dialog modal modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">have a break</h5>
+                        <button class="btn-close" type="button" data-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="embed-responsive embed-responsive-8by5"></div>
+                        <iframe id="songVideo" calss="embed-responsive-item"
+                            src="https://www.youtube-nocookie.com/embed/oOgIl4hZz8A" max-width="560" max-height="315"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <input class="button default-button" data-dismiss="modal" value="close">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-------------------tic-tac-toe play area---------------------->
+
+    <main>
+
+        <!------------------Start of the Gmae----------------->
+        <div class="modal starting-page-modal fade" tabindex="-1" role="dialog" id="startingPage">
+            <div class=" modal-dialog modal modal-dialog-centered">
+                <div class="modal-content modal-container" id="formModal">
+                    <div class="modal-header">
+                        <h5 class="modal-title">welcome to tic-tac-toe</h5>
+
+                    </div>
+                    <form class="players-form" id="playersForm">
+                        <div class="modal-body">
+                            <div id="error"></div>
+
+                            <div class="form-group">
+                                <p>Please enter player's name</p>
+                            </div>
+                            <div class="form-group">
+                                <label>player x</label>
+                                <input type="text" id="playerX" name="playerX">
+                            </div>
+                            <div class="form-group">
+                                <label>player o</label>
+                                <input type="text" id="playerO" name="playerO">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="submitBtn">let's do this </button>
                             
-                            <!-------------------tic-tac-toe play area---------------------->
-                            
-							<main>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-                                <!------------------Start of the Gmae----------------->
-                               <div class="modal starting-page-modal fade"  tabindex="-1" role="dialog" id="startingPage">
-                                   <div class=" modal-dialog modal modal-dialog-centered">
-                                       <div class="modal-content modal-container" id="formModal">
-                                       <div class="modal-header">
-                                           <h5 class="modal-title">welcome to tic-tac-toe</h5>
-                                           
-                                        </div>
-                                        <form class="players-form" id="playersForm">
-                                       <div class="modal-body" >
-                                       <div id ="error"></div>
-                                            
-                                                <div class="form-group">
-                                                    <p>Please enter player's name</p>
-                                                </div>  
-                                                <div class="form-group">
-                                                <label>player x</label>
-                                                <input type="text" id="playerX" name="playerX" >
-                                                </div>
-                                                <div class="form-group">
-                                                <label>player o</label>
-                                                <input type="text" id="playerO" name="playerO" >
-                                                </div>
-                                            
-                                       </div>
-                                        <div class="modal-footer">
-                                           <button type="button" id="submitBtn">let's do this </button>
-                                        </div>
-                                       </form>
-                                       </div>
-                                    </div>
-                               </div>
+        <input type="hidden" id="playersSubmitX" >
+        <input type="hidden" id="playersSubmitO" >
 
-                            <!-------------The Game------------------------>
+        <!-------------The Game------------------------>
 
-                                <div class="turns" id="playersTurn">'s turn</div>
+        <div class="turns" id="playersTurn">'s turn</div>
 
-                                
-								<input class="switch" id="togBtn" type="checkbox">
-                                    <label class="background-switch" for="togBtn">
-										<span>light</span>
-                                        <span>dark</span>
-                                        <span class="slider"></span>
-                                    </label>
-								
-                                    <div class="board-container">
-										<div class="game-grid" id="gameGrid">
-                                            <div class="cell" data-cell></div>
-                                            <div class="cell" data-cell></div>
-                                            <div class="cell" data-cell></div>
-                                            <div class="cell" data-cell></div>
-                                            <div class="cell" data-cell></div>
-                                            <div class="cell" data-cell></div>
-                                            <div class="cell" data-cell></div>
-                                            <div class="cell" data-cell></div>
-                                            <div class="cell" data-cell></div>
-                                        </div>
-                                        </div>
-                                  
-                                <div class="end-result" id="endResult">
-                                    <div class="game-result" id="gameResult">
-                                    <div class="game-result-text"></div>
-                                    <button id="newgameButton">new players</button>
-                                    <button id="rematchButton">rematch</button>
-                                    </div>
-                                </div>
-                                   
-								</main>
-								<!---------------------Copyright------------------------------->
-								<footer>
-									<div class="fixed-footer">copyright 2021</div>
-								</footer>
-                                <!------------------------JS Bootstrap script----------------->
-                                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-							</body>
-						</html>
+
+        <input class="switch" id="togBtn" type="checkbox">
+        <label class="background-switch" for="togBtn">
+            <span>light</span>
+            <span>dark</span>
+            <span class="slider"></span>
+        </label>
+
+        <div class="board-container">
+            <div class="game-grid" id="gameGrid">
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+            </div>
+        </div>
+        <audio src="assets/audio/draw_circle.wav" id="soundO"></audio>
+        <audio src="assets/audio/draw_x.wav" id="soundX"></audio>
+        <audio src="assets/audio/winning.mp3" id="winningSound"></audio>
+
+        <div class="end-result" id="endResult">
+            <div class="game-result" id="gameResult">
+                <div class="game-result-text"></div>
+                <button id="newgameButton">new players</button>
+                <button id="rematchButton">rematch</button>
+            </div>
+        </div>
+
+    </main>
+    <!---------------------Copyright------------------------------->
+    <footer>
+        <div class="fixed-footer">copyright 2021</div>
+    </footer>
+    <!------------------------JS Bootstrap script----------------->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
