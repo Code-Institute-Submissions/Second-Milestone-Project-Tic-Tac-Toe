@@ -51,8 +51,42 @@ body.black #navbarNav .nav-link{
    
     }
 
+.starting-page-modal {
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
-  
+.modal-container {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.modal-header span {
+    color: red;
+}
+
+.form-group {
+    padding: 10px;
+}
+
+.form-group input {
+    border: none;
+    border-radius: 5px;
+    
+    
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-footer button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+}
+
 .switch{
     opacity: 0;
     position: absolute;
