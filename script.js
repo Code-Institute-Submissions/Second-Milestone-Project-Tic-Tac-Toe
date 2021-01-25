@@ -36,9 +36,9 @@ $(window).on('load', function () {
 
 $('#submitBtn').on('click', function () {
     let errorMessages = [];
-    if (playerX.value === '') {
+    if (playerX.value === '' || playerX.value == null) {
         errorMessages.push("Player's name is required");
-    } else if (playerO.value === '') {
+    } else if (playerO.value === '' || playerO.value == null) {
         errorMessages.push("Player's name is required");
     }
 
