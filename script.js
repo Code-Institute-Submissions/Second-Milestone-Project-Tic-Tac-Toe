@@ -28,13 +28,6 @@ const winningSound = document.getElementById('winningSound');
 const switchBox = document.getElementById('togBtn');
 
 
-
-/*$(document).ready(function() {
-    $("#submitBtn").click(function() {
-        $("#startingPage").css('visibility: hidden');
-    });
-    });*/
-
 //Event Hanlers------------------------------------------------
 $(window).on('load', function () {
     $('#startingPage').modal('show');
@@ -96,7 +89,7 @@ const handleClick = function (e) {
             gameResultText.innerHTML = "No winner";
 
         } else if (checkWinner) {
-            gameResultText.innerHTML = "Congrats .....! ...... win!";
+            gameResultText.innerHTML = `Congrats ${ circleTurn ? (playersSubmitO.value) : (playersSubmitX.value)}!`;
             winningSound.play();
 
         } else {
@@ -134,9 +127,6 @@ switchBox.addEventListener('change', function () {
 });
 
 
-/*$('#submitBtn').click(function() {
-	$('#startingPage').modal('hide');
-});*/
 
 
 
