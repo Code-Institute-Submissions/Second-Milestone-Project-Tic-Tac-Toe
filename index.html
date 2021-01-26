@@ -190,11 +190,13 @@
                     </div>
                     <form class="players-form" id="playersForm">
                         <div class="modal-body">
-                            <div id="error"></div>
+                            
 
                             <div class="form-group">
                                 <p>Please enter player's name</p>
                             </div>
+
+                            <div id="error"></div>
                             <div class="form-group">
                                 <label>player x</label>
                                 <input type="text" id="playerX" name="playerX">
@@ -219,7 +221,7 @@
 
         <!-------------The Game------------------------>
 
-        <div class="turns" id="playersTurn"></div>
+        <div class="turns"><p id="playersTurn"></p>'s turn</div>
 
 
         <input class="switch" id="togBtn" type="checkbox">
@@ -247,7 +249,7 @@
         <audio src="assets/audio/winning.mp3" id="winningSound"></audio>
 
         <div class="end-result" id="endResult">
-            <div class="game-result" id="gameResult">
+            <div class="game-result " id="gameResult">
                 <div class="game-result-text"></div>
                 <button id="newgameButton">new players</button>
                 <button id="rematchButton">rematch</button>
