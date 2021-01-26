@@ -11,7 +11,7 @@ let WIN_RESULT = [
     [2, 5, 8]
 ];
 let noWinner = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
-let gameResult = document.querySelector('.game-result');
+let gameResult = document.querySelector('.end-result');
 let gameResultText = document.querySelector('.game-result-text');
 let cellElements = document.querySelectorAll('[data-cell]');
 let circleTurn;
@@ -34,7 +34,7 @@ $(window).on('load', function () {
 });
 
 
-$('#submitBtn').on('click', function () {
+$('#submitBtn').on('click', function (e) {
     let errorMessages = [];
     if (playerX.value === '' || playerX.value == null) {
         errorMessages.push("Player's name is required");
