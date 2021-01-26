@@ -87,6 +87,22 @@ body.black #navbarNav .nav-link{
     padding: 7px;
 }
 
+#error {
+    color: red;
+}
+
+
+.turns {
+    font-size: calc(1.325rem + .9vw);
+    display: inline-flex;
+    margin: 15px;
+    color: black;
+}
+
+body.black .turns {
+    color: white;
+}
+
 .switch{
     opacity: 0;
     position: absolute;
@@ -224,17 +240,45 @@ body.black .cell.o::after{
 }
 
 
-
-
-.game-result {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(106, 114, 117, 0.5);
+.end-result {
     display: none;
 }
 
-.game-result.show {
-    display: flex;
+.end-result.show {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.8);
+    left: 0;
+    right: 0;
+    justify-content: center;
+    
+}
+
+.game-result {
+    text-align: center;
+    max-width: 600px;
+    max-height: 500px;
+    margin-top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.9);
+
+
+}
+
+.game-result-text {
+    padding: 10%;
+    font-size: 4rem;
+    color: white;
+}
+
+.game-result button {
+    margin: 2%;
+    border: 0;
+    background-color: red;
+    color: black;
 }
 
 
