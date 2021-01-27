@@ -230,8 +230,25 @@
             <span>dark</span>
             <span class="slider"></span>
         </label>
-
-        <div class="board-container">
+        <div class="container score-play-container">
+            <div class="row col-12 no-gutter">
+            <div class="score-container col-4 col-12-copy-container d-block">
+                <div class="score-box">
+                    <h3>This is the header</h3>
+                    <table>
+                        <tr>
+                            <th>players name</th>
+                            <th>Score</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-8 board-game-container d-block">
+        <div class="board-container col-12-copy-container">
             <div class="game-grid" id="gameGrid">
                 <div class="cell" data-cell></div>
                 <div class="cell" data-cell></div>
@@ -243,6 +260,9 @@
                 <div class="cell" data-cell></div>
                 <div class="cell" data-cell></div>
             </div>
+            </div>
+            </div>
+        </div>
         </div>
         <audio src="assets/audio/draw_circle.wav" id="soundO"></audio>
         <audio src="assets/audio/draw_x.wav" id="soundX"></audio>
