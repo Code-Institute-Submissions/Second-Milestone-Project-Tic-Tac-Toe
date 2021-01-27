@@ -58,6 +58,8 @@ $('#submitBtn').on('click', function (e) {
 
 
 
+
+
 //x and o event handler 
 const handleClick = function (e) {
     const cell = e.target;
@@ -114,6 +116,9 @@ const handleClick = function (e) {
 
     checkTie(activeClass);
 
+
+   
+    
 };
 
 //Event Listeners------------------------------------------------
@@ -136,6 +141,8 @@ cellElements.forEach(function (cell) {
         once: true
     });
 });
+
+
 
 
 //Function----------------------------------------------------------
@@ -175,3 +182,23 @@ function checkTie(activeClass) {
     });
 }
 
+$('#newgameButton').on('click', function() {
+    location.reload(true)
+});
+
+ $('#rematchButton').on('click', function(cell) {
+   $('div').removeClass(X_CLASS);
+   $('div').removeClass(O_CLASS);
+   $('#endResult').hide();
+    
+
+
+function remacth() {
+    circleTurn = true
+    cellElements.forEach(function(cell) {
+        cell.removeEventListener('click', handleClick)
+        cell.addEventListener('click', handleClick, { once : true})
+    });
+};
+
+ });
