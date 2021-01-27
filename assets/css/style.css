@@ -143,15 +143,36 @@ body.black label .slider {
     background-color: black;
 }
 
+.score-play-container {
+    position: relative;
+    max-width: 600px;
+     height: auto;
+}
 
+.score-container {
+    position: relative;
+    align-items: center;
+}
 
-.board-container{
-    
+.score-container div {
+    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.board-game-container {
+    align-items: center;
+    position: relative;
+   
+}
+
+.board-container{
+    
+    position: absolute;
     border: none;
+    
 }
 .game-grid{
     display: grid;
