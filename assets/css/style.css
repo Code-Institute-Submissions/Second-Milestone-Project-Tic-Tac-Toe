@@ -156,7 +156,7 @@ body.black label .slider {
 .game-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: repeat(3, 1fr) ;
+    grid-auto-rows: 1fr, 1fr, 1fr ;
     grid-gap: 10px;
     background-color: black;
 }
@@ -166,8 +166,8 @@ body.black .game-grid{
 }
 
 .cell{
-    height: 200px;
-    width: 200px;
+    height: 10vmax;
+    width: 10vmax;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -257,8 +257,8 @@ body.black .cell.o::after{
 
 .game-result {
     text-align: center;
-    max-width: 600px;
-    max-height: 500px;
+    max-width: 60vmax;
+    max-height: 45vmax;
     margin-top: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -270,7 +270,7 @@ body.black .cell.o::after{
 
 .game-result-text {
     padding: 10%;
-    font-size: 4rem;
+    font-size: 5vmax;
     color: white;
 }
 
