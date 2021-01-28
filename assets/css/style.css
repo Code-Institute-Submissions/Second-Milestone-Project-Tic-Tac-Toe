@@ -139,6 +139,11 @@ label .slider {
     margin: 3px;
 }
 
+.count-down h2 {
+    text-align: center;
+    font-size: 7vh;
+}
+
 body.black label .slider {
     background-color: black;
 }
@@ -152,7 +157,7 @@ body.black label .slider {
 }
 
 .score-play-row {
-    height: 80vh;
+    height: 60vh;
     width: 100%;
     
 }
@@ -229,8 +234,8 @@ body.black .game-grid{
 }
 
 .cell{
-    height: 15vmax;
-    width: 15vmax;
+    height: 10vmax;
+    width: 10vmax;
     background-color: white;
     display: flex;
     justify-content: center;
