@@ -27,11 +27,18 @@ const winningSound = document.getElementById('winningSound');
 
 const switchBox = document.getElementById('togBtn');
 
+let countdownClock = document.getElementById('countDown');
+let timeLeft = 60 
+    
+
 
 //Event Hanlers------------------------------------------------
 $(window).on('load', function () {
     $('#startingPage').modal('show');
 });
+
+
+
 
 
 $('#submitBtn').on('click', function (e) {
@@ -51,10 +58,31 @@ $('#submitBtn').on('click', function (e) {
         $('#playersSubmitX').val(playerX.value);
         $('#playersTurn').text(playersSubmitX.value);
         $('#startingPage').modal('hide') 
+        countdownClock(timeLeft, countDown);
 
     }
 
 });
+
+
+countDown = setInterval(function() {
+       let timeLeft = 60 - 1;
+       let minute = Math.floor((timeLeft % ( 1000 * 60 * 60)) / (1000 * 60));
+       let seconds = Math.floor((timeLeft % (1000 * 60) / 1000));
+
+       countdownClock.innerHTML= minute + ":" + seconds;
+
+        if (timeLeft <= 0 ) {
+            clearInterval( timeLeft = 0)
+            gameResult.innerHTML = "Game over! No winner!"
+            gameResult.classList.add('show')
+        }
+        
+
+    }, 1000);
+    
+   
+       
 
 
 
