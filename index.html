@@ -26,12 +26,13 @@
                             <h1>t<span>i</span>c-t<span>a</span>c-t<span>o</span>e
                             </h1>
                         </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarToggle" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
+                        
+                        <div class="collapse navbar-collapse" id="navbarToggle">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#gameRules" data-toggle="modal"
@@ -54,7 +55,7 @@
             </div>
         </div>
 
-        <div class="modal rules-modal fade" id="gameRules" tabindex="-1" aria-hidden="true" role="dialog">
+       <div class="modal rules-modal fade" id="gameRules" tabindex="-1" aria-hidden="true" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -70,9 +71,10 @@
                             out what the person playing against you might do next.
 
                         </p>
-                        <p>
-                            RULES FOR TIC-TAC-TOE
+                        
+                           <h3> RULES FOR TIC-TAC-TOE </h3>
 
+                        <p>
                             1. The game is played on a grid that's 3 squares by 3 squares.
 
                             2. You are X, your friend (or the computer in this case) is O. Players take turns putting
@@ -84,9 +86,9 @@
                             4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the
                             game ends in a tie.
                         </p>
-                        <p>
-                            HOW CAN I WIN AT TIC-TAC-TOE?
-                            To beat the computer (or at least tie), you need to make use of a little bit of strategy.
+                        
+                           <h3> HOW CAN I WIN AT TIC-TAC-TOE? </h3>
+                           <p> To beat the computer (or at least tie), you need to make use of a little bit of strategy.
                             Strategy means figuring out what you need to do to win.
 
                             Part of your strategy is trying to figure out how to get three Xs in a row. The other part
@@ -106,7 +108,7 @@
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <input class="button default-button" data-dismiss="modal" value="let's play">
+                        <button class="button default-button" data-dismiss="modal" value="close"></button>
                     </div>
                 </div>
             </div>
@@ -121,42 +123,42 @@
                     <div class="modal-body">
                         <p>
                             Games played on three-in-a-row boards can be traced back to ancient Egypt,[5] where such
-                            game boards have been found on roofing tiles dating from around 1300 BCE.[6]
+                            game boards have been found on roofing tiles dating from around 1300 BCE.[6]</p>
 
-                            An early variation of tic-tac-toe was played in the Roman Empire, around the first century
+                           <p>An early variation of tic-tac-toe was played in the Roman Empire, around the first century
                             BC. It was called terni lapilli (three pebbles at a time) and instead of having any number
                             of pieces, each player only had three, thus they had to move them around to empty spaces to
                             keep playing.[7] The game's grid markings have been found chalked all over Rome. Another
                             closely related ancient game is three men's morris which is also played on a simple grid and
-                            requires three pieces in a row to finish,[8] and Picaria, a game of the Puebloans.
+                            requires three pieces in a row to finish,[8] and Picaria, a game of the Puebloans.</p> 
 
-                            The different names of the game are more recent. The first print reference to "noughts and
+                           <p> The different names of the game are more recent. The first print reference to "noughts and
                             crosses" (nought being an alternative word for zero), the British name, appeared in 1858, in
                             an issue of Notes and Queries.[9] The first print reference to a game called "tick-tack-toe"
                             occurred in 1884, but referred to "a children's game played on a slate, consisting in trying
                             with the eyes shut to bring the pencil down on one of the numbers of a set, the number hit
                             being scored". "Tic-tac-toe" may also derive from "tick-tack", the name of an old version of
                             backgammon first described in 1558. The US renaming of "noughts and crosses" as
-                            "tic-tac-toe" occurred in the 20th century.[10]
+                            "tic-tac-toe" occurred in the 20th century.[10]</p>
 
-                            In 1952, OXO (or Noughts and Crosses), developed by British computer scientist Sandy Douglas
+                            <p>In 1952, OXO (or Noughts and Crosses), developed by British computer scientist Sandy Douglas
                             for the EDSAC computer at the University of Cambridge, became one of the first known video
                             games.[11][12] The computer player could play perfect games of tic-tac-toe against a human
-                            opponent.[11]
+                            opponent.[11]</p>
 
-                            In 1975, tic-tac-toe was also used by MIT students to demonstrate the computational power of
+                            <p>In 1975, tic-tac-toe was also used by MIT students to demonstrate the computational power of
                             Tinkertoy elements. The Tinkertoy computer, made out of (almost) only Tinkertoys, is able to
                             play tic-tac-toe perfectly.[13] It is currently on display at the Museum of Science, Boston.
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <input class="button default-button" data-dismiss="modal" value="close">
+                        <button class="button default-button" data-dismiss="modal" value="close"></button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="modal song-modal fade" id="gameSong" tabindex="-1" aria-hidden="true" role="dialog">
-            <div class="modal-dialog modal modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">have a break</h5>
@@ -164,12 +166,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-8by5"></div>
-                        <iframe id="songVideo" calss="embed-responsive-item"
-                            src="https://www.youtube-nocookie.com/embed/oOgIl4hZz8A" max-width="560" max-height="315"
-                            allowfullscreen></iframe>
+                       
+                           <audio src="assets/audio/tic-tac-toe-song.mp3"></audio> 
+                           <button><i class="fas fa-pause" id="pauseBtn"></i></button>
                     </div>
                     <div class="modal-footer">
-                        <input class="button default-button" data-dismiss="modal" value="close">
+                        
+                        <button class="button default-button" data-dismiss="modal" value="close"></button>
                     </div>
                 </div>
             </div>
