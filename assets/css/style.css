@@ -145,34 +145,75 @@ body.black label .slider {
 
 .score-play-container {
     position: relative;
-    max-width: 600px;
+    width: 100%;
      height: auto;
+     display: flex;
+
+}
+
+.score-play-row {
+    height: 80vh;
+    width: 100%;
+    
 }
 
 .score-container {
     position: relative;
     align-items: center;
+    justify-content: center;
+    
 }
 
-.score-container div {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.score-box {
+    height: 33vmax;
+    width: 27vmax;
+    background-color: white;
+    color: black;
+    
+}
+
+body.black .score-box {
+    background-color: black;
+    color: white;
+}
+th, td {
+    padding: 1vw;
+}
+.score-header {
+    border-bottom: 3px solid red;
+    padding: 10% 10% 5%;
+    text-align: center;
+}
+
+
+
+.score-cloumn {
+    border-bottom: 3px solid red;
+}
+
+.player-one {
+    font-size: clamp(12px, 1.5vw, 14px);
+    border-bottom: 3px solid red;
+    
+}
+
+.player-two {
+    font-size: clamp(12px, 1.5vw, 14px);
+    border-bottom: 3px solid red;
 }
 
 .board-game-container {
     align-items: center;
     position: relative;
-   
+    display: block;
+   justify-content: center;
 }
 
 .board-container{
     
     position: absolute;
     border: none;
-    
+    display: block;
 }
 .game-grid{
     display: grid;
@@ -180,6 +221,7 @@ body.black label .slider {
     grid-auto-rows: 1fr, 1fr, 1fr ;
     grid-gap: 10px;
     background-color: black;
+   
 }
 
 body.black .game-grid{
@@ -187,8 +229,8 @@ body.black .game-grid{
 }
 
 .cell{
-    height: 10vmax;
-    width: 10vmax;
+    height: 15vmax;
+    width: 15vmax;
     background-color: white;
     display: flex;
     justify-content: center;
