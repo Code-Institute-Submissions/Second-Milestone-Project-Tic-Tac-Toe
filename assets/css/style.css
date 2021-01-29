@@ -7,7 +7,7 @@ body.black {
 }
 /*------------------------------NAVBAR---------------------------------*/
 .navbar{
-    background-color: pink;
+    background-color: black;
     width: 100%;
 }
 
@@ -50,6 +50,10 @@ body.black #navbarToggle .nav-link{
     color: #ff0000;
    
     }
+
+   .fa-youtube {
+       color: red;
+   } 
 
 .starting-page-modal {
     background-color: rgba(0, 0, 0, 0.6);
@@ -308,14 +312,10 @@ body.black .cell.o::after{
 }
 
 
-.end-result {
-    display: none;
-}
 
-.end-result.show {
-    display: inline-block;
-    position: absolute;
-    height: 100%;
+
+.end-result {
+    display:block;
     background-color: rgb(0, 0, 0, 0.8);
     left: 0;
     right: 0;
@@ -324,16 +324,7 @@ body.black .cell.o::after{
 }
 
 .game-result {
-    text-align: center;
-    max-width: 60vmax;
-    max-height: 45vmax;
-    margin-top: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
     background-color: rgb(0, 0, 0, 0.9);
-
-
 }
 
 .game-result-text {
