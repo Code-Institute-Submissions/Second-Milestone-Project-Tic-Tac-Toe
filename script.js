@@ -117,11 +117,11 @@ const handleClick = function (e) {
     let activeClass = X_CLASS || O_CLASS;
     if (circleTurn) {
         activeClass = O_CLASS;
-        document.getElementById('playersTurn').innerText = playersSubmitX.value;
+        document.getElementById('playersTurn').innerHTML = playersSubmitX.value;
         soundO.play();
     } else {
         activeClass = X_CLASS;
-        document.getElementById('playersTurn').innerText = playersSubmitO.value;
+        document.getElementById('playersTurn').innerHTML =playersSubmitO.value;
         soundX.play();
     }
 
@@ -142,7 +142,7 @@ const handleClick = function (e) {
             gameResultText.innerHTML = "No winner";
 
         } else if (checkWinner) {
-            gameResultText.innerHTML = `Congrats ${ circleTurn ? (playersSubmitO.value) : (playersSubmitX.value)}!`;
+            gameResultText.innerHTML = `${ circleTurn ? ('<i class="fas fa-circle-notch fa-spin"></i> '+'Congrats '+playersSubmitO.value+'!'+' <i class="fas fa-circle-notch fa-spin"></i>') : ('<i class="fas fa-times fa-spin"></i> '+'Congrats '+playersSubmitX.value+'!'+' <i class="fas fa-times fa-spin"></i>')}`;
             winningSound.play();
 
         } else {
