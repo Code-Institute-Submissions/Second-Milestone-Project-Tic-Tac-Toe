@@ -311,20 +311,22 @@ body.black .cell.o::after{
     background-color: black;
 }
 
+.end-resul {
+    display: none;
+}
 
-
-
-.end-result {
-    display:block;
+.end-result.show{
     background-color: rgb(0, 0, 0, 0.8);
     left: 0;
     right: 0;
     justify-content: center;
+    display: block;
     
 }
 
 .game-result {
     background-color: rgb(0, 0, 0, 0.9);
+    color: white;
 }
 
 .game-result-text {
