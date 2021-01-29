@@ -43,7 +43,7 @@
                                         data-target="#gameHistory">history</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#gameSong" data-toggle="modal"
+                                    <a class="nav-link game-song" href="#gameSong" data-toggle="modal"
                                         data-target="#gameSong">tic-tac-toe song
                                         <i class="fab fa-youtube"></i>
                                     </a>
@@ -162,17 +162,18 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">have a break</h5>
-                        <button class="btn-close" type="button" data-dismiss="modal" aria-label="close"></button>
+                        <button class="btn-close close-song-modal" type="button" data-dismiss="modal" aria-label="close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-8by5"></div>
                        
-                           <audio src="assets/audio/tic-tac-toe-song.mp3"></audio> 
-                           <button><i class="fas fa-pause" id="pauseBtn"></i></button>
+                           <audio src="assets/audio/tic-tac-toe-song.mp3" class="tic-tac-toe-song"></audio> 
+                           <button  id="pauseBtn"><span><i class="fas fa-pause"></i></span></button>
+                           <button  id="playBtn"><span><i class="fas fa-play"></i></span></button>
                     </div>
                     <div class="modal-footer">
                         
-                        <button class="button default-button" data-dismiss="modal" value="close"></button>
+                        <button class="button default-button close-song-modal" data-dismiss="modal" value="close"></button>
                     </div>
                 </div>
             </div>
