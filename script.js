@@ -182,16 +182,22 @@ switchBox.addEventListener('change', function () {
     document.body.classList.toggle('black');
 });
 
-
-
+$('#rematchButton').on('click', function(cell) {
+   $('div').removeClass(X_CLASS);
+   $('div').removeClass(O_CLASS);
+   gameCells();
+});
 
 
 //x and o 
+function gameCells () {
 cellElements.forEach(function (cell) {
+     cell.removeEventListener('click', handleClick)
     cell.addEventListener('click', handleClick, {
         once: true
     });
 });
+};
 
 
 
@@ -237,19 +243,5 @@ $('#newgameButton').on('click', function() {
     location.reload(true)
 });
 
- $('#rematchButton').on('click', function(cell) {
-   $('div').removeClass(X_CLASS);
-   $('div').removeClass(O_CLASS);
-   $('#endResult').hide();
-    
-
-
-function remacth() {
-    circleTurn = true
-    cellElements.forEach(function(cell) {
-        cell.removeEventListener('click', handleClick)
-        cell.addEventListener('click', handleClick, { once : true})
-    });
-};
-
- });
+ 
+   
