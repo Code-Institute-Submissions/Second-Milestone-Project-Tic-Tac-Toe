@@ -24,12 +24,12 @@ let playersSubmitX = document.getElementById('playersSubmitX');
 const soundX = document.getElementById('soundX');
 const soundO = document.getElementById('soundO');
 const winningSound = document.getElementById('winningSound');
-
+const gameSong = document.querySelector('.tic-tac-toe-song');
 const switchBox = document.getElementById('togBtn');
 
 let countdownClock = document.getElementById('countDown');
 let timeLeft = 60 
-    
+ 
 
 
 //Event Hanlers------------------------------------------------
@@ -38,6 +38,29 @@ $(window).on('load', function () {
 });
 
 
+$('.game-song').on('click', function() {
+    gameSong.play();
+    $('#pauseBtn').show();
+    $('#playBtn').hide();
+});
+
+$('#pauseBtn').on('click', function () { 
+       gameSong.pause();
+       $('#playBtn').show();
+       $('#pauseBtn').hide();
+});
+
+$('#playBtn').on('click', function () { 
+       gameSong.play();
+       $('#pauseBtn').show();
+       $('#playBtn').hide(); 
+});
+
+$('.close-song-modal').on('click', function () {
+    gameSong.pause();
+    $(gameSong).get(0).currentTime = 0;
+    
+})
 
 
 
