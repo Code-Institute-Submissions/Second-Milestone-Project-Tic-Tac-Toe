@@ -5,9 +5,9 @@ body{
 body.black {
     background-color: rgb(0, 0, 0);
 }
-/*------------------------------NAVBAR---------------------------------*/
+
 .navbar{
-    background-color: black;
+    background-color: pink;
     width: 100%;
 }
 
@@ -50,6 +50,27 @@ body.black #navbarToggle .nav-link{
     color: #ff0000;
    
     }
+
+
+.history-content,
+.rules-content {
+    background-color: white;
+    color: black;
+
+}
+
+.history-header,
+.rules-header,
+.song-header {
+    border-bottom: 1px solid black;
+}
+
+
+
+
+
+
+
 
    .fa-youtube {
        color: red;
