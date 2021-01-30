@@ -81,28 +81,31 @@ $('#submitBtn').on('click', function (e) {
         $('#playersSubmitX').val(playerX.value);
         $('#playersTurn').text(playersSubmitX.value);
         $('#startingPage').modal('hide') 
-        countdownClock(timeLeft, countDown);
-
+        setInterval(countdown, 1000);
     }
 
 });
-
-
-countDown = setInterval(function() {
-       let timeLeft = 60 - 1;
-       let minute = Math.floor((timeLeft % ( 1000 * 60 * 60)) / (1000 * 60));
-       let seconds = Math.floor((timeLeft % (1000 * 60) / 1000));
+ 
+function countdown() {    
+     let minute = Math.floor(timeLeft / 60);
+       let seconds = Math.floor(timeLeft % 60);
 
        countdownClock.innerHTML= minute + ":" + seconds;
+        timeLeft--;
 
-        if (timeLeft <= 0 ) {
+      if (timeLeft <= 0 ) {
             clearInterval( timeLeft = 0)
-            gameResult.innerHTML = "Game over! No winner!"
+            countdownClock.innerHTML = 'the time is up'
+            gameResultText.innerHTML = "Game over! No winner!"
             gameResult.classList.add('show')
         }
         
+          };
+          
+           
+           
 
-    }, 1000);
+        
     
    
        
@@ -139,14 +142,18 @@ const handleClick = function (e) {
 
     function gameOver(checkTie) {
         if (checkTie) {
+            
             gameResultText.innerHTML = "No winner";
-
+            
         } else if (checkWinner) {
+            
             gameResultText.innerHTML = `${ circleTurn ? ('<i class="fas fa-circle-notch fa-spin"></i> '+'Congrats '+playersSubmitO.value+'!'+' <i class="fas fa-circle-notch fa-spin"></i>') : ('<i class="fas fa-times fa-spin"></i> '+'Congrats '+playersSubmitX.value+'!'+' <i class="fas fa-times fa-spin"></i>')}`;
             winningSound.play();
-
+            
         } else {
+            
             gameResultText.innerHTML = "Did you heck the system? &#128561";
+            
         }
         gameResult.classList.add('show');
     }
@@ -182,22 +189,28 @@ switchBox.addEventListener('change', function () {
     document.body.classList.toggle('black');
 });
 
-$('#rematchButton').on('click', function(cell) {
-   $('div').removeClass(X_CLASS);
-   $('div').removeClass(O_CLASS);
-   gameCells();
-});
+
+
 
 
 //x and o 
-function gameCells () {
-cellElements.forEach(function (cell) {
-     cell.removeEventListener('click', handleClick)
+
+    
+cellElements.forEach(function (cell) { 
     cell.addEventListener('click', handleClick, {
         once: true
     });
+     
 });
-};
+
+
+$('#rematchButton').on('click', function(cell) {
+   $('div').removeClass(X_CLASS);
+   $('div').removeClass(O_CLASS);
+   
+   $(gameResult).hide();
+   setInterval(countdown, 1000);
+});
 
 
 
