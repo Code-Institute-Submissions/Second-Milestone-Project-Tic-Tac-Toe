@@ -209,7 +209,7 @@ $('#rematchButton').on('click', function(cell) {
    $('div').removeClass(O_CLASS);
    
    $(gameResult).hide();
-   setInterval(countdown, 1000);
+   
 });
 
 
