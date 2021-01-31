@@ -28,9 +28,10 @@ const gameSong = document.querySelector('.tic-tac-toe-song');
 const switchBox = document.getElementById('togBtn');
 
 let countdownClock = document.getElementById('countDown');
-let timeLeft = 60 
- 
-
+let timeLeft = 60
+let timer;
+let startScoreX = 0;
+let startScoreO = 0;
 
 //Event Hanlers------------------------------------------------
 $(window).on('load', function () {
@@ -38,28 +39,28 @@ $(window).on('load', function () {
 });
 
 
-$('.game-song').on('click', function() {
+$('.game-song').on('click', function () {
     gameSong.play();
     $('#pauseBtn').show();
     $('#playBtn').hide();
 });
 
-$('#pauseBtn').on('click', function () { 
-       gameSong.pause();
-       $('#playBtn').show();
-       $('#pauseBtn').hide();
+$('#pauseBtn').on('click', function () {
+    gameSong.pause();
+    $('#playBtn').show();
+    $('#pauseBtn').hide();
 });
 
-$('#playBtn').on('click', function () { 
-       gameSong.play();
-       $('#pauseBtn').show();
-       $('#playBtn').hide(); 
+$('#playBtn').on('click', function () {
+    gameSong.play();
+    $('#pauseBtn').show();
+    $('#playBtn').hide();
 });
 
 $('.close-song-modal').on('click', function () {
     gameSong.pause();
     $(gameSong).get(0).currentTime = 0;
-    
+
 })
 
 
@@ -76,39 +77,42 @@ $('#submitBtn').on('click', function (e) {
         e.preventDefault();
         document.getElementById('error').innerText = errorMessages;
     }
-    else { 
+    else {
         $('#playersSubmitO').val(playerO.value);
         $('#playersSubmitX').val(playerX.value);
         $('#playersTurn').text(playersSubmitX.value);
-        $('#startingPage').modal('hide') 
-        setInterval(countdown, 1000);
+        $('.score-nameX').text(playersSubmitX.value);
+        $('.score-nameO').text(playersSubmitO.value);
+        $('#startingPage').modal('hide')
+        timer = setInterval(countdown, 1000);
     }
+       
 
 });
- 
-function countdown() {    
-     let minute = Math.floor(timeLeft / 60);
-       let seconds = Math.floor(timeLeft % 60);
 
-       countdownClock.innerHTML= minute + ":" + seconds;
-        timeLeft--;
+function countdown() {
+    let minute = Math.floor(timeLeft / 60);
+    let seconds = Math.floor(timeLeft % 60);
 
-      if (timeLeft <= 0 ) {
-            clearInterval( timeLeft = 0)
-            countdownClock.innerHTML = 'the time is up'
-            gameResultText.innerHTML = "Game over! No winner!"
-            gameResult.classList.add('show')
-        }
-        
-          };
-          
-           
-           
+    countdownClock.innerHTML = minute + ":" + seconds;
+    timeLeft--;
 
-        
-    
-   
-       
+    if (timeLeft <= 0) {
+        clearInterval(timeLeft = 0)
+        countdownClock.innerHTML = 'the time is up'
+        gameResultText.innerHTML = "Game over! No winner!"
+        gameResult.classList.add('show')
+    }
+
+};
+
+
+
+
+
+
+
+
 
 
 
@@ -124,11 +128,11 @@ const handleClick = function (e) {
         soundO.play();
     } else {
         activeClass = X_CLASS;
-        document.getElementById('playersTurn').innerHTML =playersSubmitO.value;
+        document.getElementById('playersTurn').innerHTML = playersSubmitO.value;
         soundX.play();
     }
 
-    
+
 
 
     //show click
@@ -138,24 +142,6 @@ const handleClick = function (e) {
         gameOver(false);
     } else if (checkTie()) {
         gameOver(true);
-    }
-
-    function gameOver(checkTie) {
-        if (checkTie) {
-            
-            gameResultText.innerHTML = "No winner";
-            
-        } else if (checkWinner) {
-            
-            gameResultText.innerHTML = `${ circleTurn ? ('<i class="fas fa-circle-notch fa-spin"></i> '+'Congrats '+playersSubmitO.value+'!'+' <i class="fas fa-circle-notch fa-spin"></i>') : ('<i class="fas fa-times fa-spin"></i> '+'Congrats '+playersSubmitX.value+'!'+' <i class="fas fa-times fa-spin"></i>')}`;
-            winningSound.play();
-            
-        } else {
-            
-            gameResultText.innerHTML = "Did you heck the system? &#128561";
-            
-        }
-        gameResult.classList.add('show');
     }
 
 
@@ -175,8 +161,8 @@ const handleClick = function (e) {
     checkTie(activeClass);
 
 
-   
-    
+
+
 };
 
 //Event Listeners------------------------------------------------
@@ -195,21 +181,25 @@ switchBox.addEventListener('change', function () {
 
 //x and o 
 
-    
-cellElements.forEach(function (cell) { 
+
+cellElements.forEach(function (cell) {
     cell.addEventListener('click', handleClick, {
         once: true
     });
-     
+
 });
 
 
-$('#rematchButton').on('click', function(cell) {
-   $('div').removeClass(X_CLASS);
-   $('div').removeClass(O_CLASS);
-   
-   $(gameResult).hide();
-   
+$('#rematchButton').on('click', function () {
+    $('div').removeClass(X_CLASS);
+    $('div').removeClass(O_CLASS);
+    $(gameResult).hide();
+    cellElements.forEach(function (cell) {
+        cell.addEventListener('click', handleClick, { once: true });
+    });
+    
+    timeLeft = 60; 
+    timer = setInterval(countdown, 1000);
 });
 
 
@@ -227,8 +217,37 @@ function changeColor() {
 
 //x and o function 
 
+function gameOver(checkTie) {
+    
+    if (checkTie) {
+        
+        gameResultText.innerHTML = "No winner";
+
+    } else if (checkWinner) {
+
+        gameResultText.innerHTML = `${circleTurn ? ('<i class="fas fa-circle-notch fa-spin"></i> ' + 'Congrats ' + playersSubmitO.value + '!' + ' <i class="fas fa-circle-notch fa-spin"></i>') : ('<i class="fas fa-times fa-spin"></i> ' + 'Congrats ' + playersSubmitX.value + '!' + ' <i class="fas fa-times fa-spin"></i>')}`;
+        winningSound.play();
+        setScore();
+    } else {
+
+        gameResultText.innerHTML = "Did you heck the system? &#128561";
+
+    }
+    gameResult.classList.add('show');
+    $(gameResult).show();
+    clearInterval(timer);
+};
 
 
+function setScore() {
+    if (circleTurn) {
+        startScoreO ++;
+        document.getElementById('scoreO').innerText = startScoreO;
+    } else {
+        startScoreX ++;
+        document.getElementById('scoreX').innerText = startScoreX;
+    }
+}
 
 function drawClick(cell, activeClass) {
     cell.classList.add(activeClass);
@@ -252,9 +271,8 @@ function checkTie(activeClass) {
     });
 }
 
-$('#newgameButton').on('click', function() {
+$('#newgameButton').on('click', function () {
     location.reload(true)
 });
 
- 
-   
+
