@@ -36,6 +36,9 @@ let startScoreO = 0;
 //Event Hanlers------------------------------------------------
 $(window).on('load', function () {
     $('#startingPage').modal('show');
+
+     $('.mute-button').show();
+    $('.sound-button').hide();
 });
 
 
@@ -275,4 +278,14 @@ $('#newgameButton').on('click', function () {
     location.reload(true)
 });
 
+$('.mute-button').on('click', function () {
+    $('audio').prop('muted', true);
+    $('.sound-button').show();
+    $('.mute-button').hide();
+});
 
+$('.sound-button').on('click', function () {
+    $('audio').prop('muted', false);
+    $('.mute-button').show();
+    $('.sound-button').hide();
+});
