@@ -83,7 +83,7 @@ $('#submitBtn').on('click', function (e) {
     else {
         $('#playersSubmitO').val(playerO.value);
         $('#playersSubmitX').val(playerX.value);
-        $('#playersTurn').text(playersSubmitX.value);
+        $('#playersTurn').text('next turn: ' + playersSubmitX.value);
         $('.score-nameX').text(playersSubmitX.value);
         $('.score-nameO').text(playersSubmitO.value);
         $('#startingPage').modal('hide')
@@ -127,11 +127,11 @@ const handleClick = function (e) {
     let activeClass = X_CLASS || O_CLASS;
     if (circleTurn) {
         activeClass = O_CLASS;
-        document.getElementById('playersTurn').innerHTML = playersSubmitX.value;
+        document.getElementById('playersTurn').innerText= 'next turn: ' + playersSubmitX.value ;
         soundO.play();
     } else {
         activeClass = X_CLASS;
-        document.getElementById('playersTurn').innerHTML = playersSubmitO.value;
+        document.getElementById('playersTurn').innerText = 'next turn: ' + playersSubmitO.value ;
         soundX.play();
     }
 
