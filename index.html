@@ -159,7 +159,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal song-modal fade" id="gameSong" tabindex="-1" aria-hidden="true" role="dialog">
+        <div class="modal song-modal fade" id="gameSong" tabindex="-1" aria-hidden="true" role="dialog" data-backdrop="static">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header song-header">
@@ -187,7 +187,7 @@
     <main>
 
         <!------------------Start of the Gmae----------------->
-        <div class="modal starting-page-modal fade" tabindex="-1" role="dialog" id="startingPage">
+        <div class="modal starting-page-modal fade" tabindex="-1" role="dialog" id="startingPage" data-backdrop="static">
             <div class=" modal-dialog modal modal-dialog-centered">
                 <div class="modal-content modal-container" id="formModal">
                     <div class="modal-header justify-content-center">
@@ -227,18 +227,21 @@
 
         <!-------------The Game------------------------>
         <div class="switch-box container">
-        <div class="turns"><p id="playersTurn"></p>'s turn</div>
-
+        <div class="turns col-3"><p id="playersTurn"></p></div>
         
-        <input class="switch" id="togBtn" type="checkbox">
+        <div class="count-down col-3">
+            <h2 id="countDown"></h2>
+        </div>
+       <div class="col-3"> <button class="mute-button"><i class="fas fa-volume-mute fa-3x"></i></button>
+         <button class="sound-button"><i class="fas fa-volume-up fa-3x"></i></button>
+         </div>
+        <div class="col-3"><input class="switch" id="togBtn" type="checkbox">
         <label class="background-switch" for="togBtn">
             <h6>light</h6>
             <h6>dark</h6>
             <span class="slider"></span>
         </label>
         </div>
-        <div class="count-down container">
-            <h2 id="countDown"></h2>
         </div>
         
         <div class="container score-play-container">
@@ -308,8 +311,7 @@
         </div>
 
 
-        <button class="mute-button"><i class="fas fa-volume-mute fa-3x"></i></button>
-         <button class="sound-button"><i class="fas fa-volume-up fa-3x"></i></button>
+        
       
 
     </main>
