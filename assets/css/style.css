@@ -140,6 +140,9 @@ body.black #navbarToggle .nav-link{
     color: red;
 }
 
+.switch-box {
+    display: flex;
+}
 
 .turns {
     font-size: calc(1.325rem + .9vw);
