@@ -71,13 +71,29 @@ body.black #navbarToggle .nav-link{
 
 
 
+.song-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#pauseBtn,
+#playBtn {
+    border: none;
+    background-color: transparent;
+}
 
+#pauseBtn:hover,
+#playBtn:hover {
+    color: red;
+}
 
 
    .fa-youtube {
        color: red;
    } 
+
+
 
 .starting-page-modal {
     background-color: rgba(0, 0, 0, 0.6);
@@ -113,6 +129,11 @@ body.black #navbarToggle .nav-link{
     border: none;
     border-radius: 5px;
     padding: 7px 20px;
+}
+
+.modal-footer button:hover {
+    background-color: black;
+    color: white;
 }
 
 #error {
@@ -182,6 +203,10 @@ body.black label .slider {
 .count-down h2 {
     text-align: center;
     font-size: 7vh;
+}
+
+body.black .count-down h2 {
+    color: white;
 }
 
 .score-play-container {
@@ -374,6 +399,29 @@ body.black .cell.o::after{
     color: black;
 }
 
+
+.mute-button,
+.sound-button {
+    border: none;
+    background-color: transparent;
+    display: flex ;
+    margin: auto;
+}
+
+body.black .mute-button,
+body.black .sound-button {
+    color: white;
+}
+
+.mute-button:hover,
+.sound-button:hover {
+    color: red;
+}
+
+body.black .mute-button:hover,
+body.black .sound-button:hover {
+    color: red;
+}
 
 footer{
     position: fixed;
