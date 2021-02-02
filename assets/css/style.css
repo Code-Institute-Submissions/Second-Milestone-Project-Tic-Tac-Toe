@@ -142,13 +142,30 @@ body.black #navbarToggle .nav-link{
 
 .switch-box {
     display: flex;
+    margin-top: 15px;
+    min-height: 50px;
+}
+
+.mute-button,
+.sound-button {
+    border: none;
+    background-color: transparent;
+    display: flex ;
+   
 }
 
 .turns {
     font-size: calc(1.325rem + .9vw);
     display: inline-flex;
-    margin: 15px;
+    margin: 0;
     color: black;
+    justify-content: center;
+
+}
+
+#playersTurn {
+    margin: 0;
+    margin-bottom: 0;
 }
 
 body.black .turns {
@@ -163,7 +180,7 @@ body.black .turns {
     transform: translateX(54px);
 }
 .background-switch{
-    width: 120px;
+    width: 122px;
     height: 35px;
     float: right;
     
@@ -171,7 +188,7 @@ body.black .turns {
    
     display: flex;
     border: none;
-    margin: 15px;
+    margin: 0;
     align-items: center;
     border-radius: 5px;
 }
@@ -185,13 +202,14 @@ body.black .background-switch{
    margin-bottom: 0;
      color: red;
      padding: 10%;
+     width: 50%;
 }
 
 label .slider{
     background-color: white;
     position: absolute;
     height: 29px;
-    width: 54px;
+    width: 52px;
     border-radius: 5px;
    
     margin: 3px;
@@ -205,7 +223,7 @@ body.black label .slider {
 
 .count-down h2 {
     text-align: center;
-    font-size: 7vh;
+    font-size: 4vh;
 }
 
 body.black .count-down h2 {
@@ -223,6 +241,7 @@ body.black .count-down h2 {
 .score-play-row {
     height: 60vh;
     width: 100%;
+    margin: auto;
     
 }
 
@@ -280,7 +299,7 @@ th, td {
 
 .board-container{
     
-    position: absolute;
+    position: relative;
     border: none;
     display: block;
 }
@@ -403,13 +422,7 @@ body.black .cell.o::after{
 }
 
 
-.mute-button,
-.sound-button {
-    border: none;
-    background-color: transparent;
-    display: flex ;
-    margin: auto;
-}
+
 
 body.black .mute-button,
 body.black .sound-button {
@@ -436,3 +449,19 @@ footer{
     color: white;
 }
     
+
+@media screen and ( max-width: 575px ) {
+    .score-header,
+    .score-cloumn {
+        display: none;
+    }
+
+    .score-container {
+        max-height: 100px;
+    }
+
+    .score-box {
+        height: auto;
+    }
+    
+}
