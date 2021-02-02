@@ -13,16 +13,16 @@ The other modal I created is a rules tab, which gives the basic rules and some g
 
 ## User Experience
 
-Clear design of the and easy to navigate on the site
-Simple rules of the game for every age category 
-Clear scoring system and timing 
-Rematching and taking turns who starts the game 
-Able to switch between light or dark background 
-Able to reload the page for new players without using the  browser’s reload page button 
-Able to mute the game if the user prefers to not have sounds 
-Stop and pause tic-tac-toe song 
-On closing tic tac toe song modal the song stops and resets for the beginning
-Accessible and responsive on every screen size
+- Clear design of the and easy to navigate on the site
+- Simple rules of the game for every age category 
+- Clear scoring system and timing 
+- Rematching and taking turns who starts the game 
+- Able to switch between light or dark background 
+- Able to reload the page for new players without using the  browser’s reload page button 
+- Able to mute the game if the user prefers to not have sounds 
+- Stop and pause tic-tac-toe song 
+- On closing tic tac toe song modal the song stops and resets for the beginning
+- Accessible and responsive on every screen size
 
 
 ## Wireframe 
@@ -155,14 +155,14 @@ The site was tested all the way through, using Chrome dev tools, and made sure e
 My code was also beautified and validated for all html, css and JavaScript in the above mentioned sites. 
 
 ## Assets
--GitHub - used GitPod as an editor
--HTML
--CSS
--jQuery 
--JavaScript
--Bootstrap - partly for modal and partially for the navigation bar
--Font Awesome - Through the pages used font awesome icons for youtube icon next to tic-tac-toe song and on the winning message announcements 
--Google Fonts - Used Google Fonts; NTR
+- GitHub - used GitPod as an editor
+- HTML
+- CSS
+- jQuery 
+- JavaScript
+- Bootstrap - partly for modal and partially for the navigation bar
+- Font Awesome - Through the pages used font awesome icons for youtube icon next to tic-tac-toe song and on the winning message announcements 
+- Google Fonts - Used Google Fonts; NTR
 
 
 ## Credits
@@ -180,9 +180,9 @@ For the audio sounds of winning and tie i used sounds from the [following websit
 To convert the youtube video to mp3 I used the [following website](https://youtubetomp3music.com/en5/) 
 
 ## Deployments
--My project was built and it is stored on Github I created a master branch for the project in the following way: Go to your GitHub account and select “New Repository” from the drop down menu Next to the owner after the / add a short name to repository Select add README file and add .gitignore file Create repository
--If you wish to clone: On GitHub navigate to the main page of the repository Click clone or download green button Click on the copy icon at the end of the https:// link Open the terminal Navigate to the location where the repository is going to be stored With the repository URL enter the following $ git clone https://github.com/ZitaBalint/Second-Milestone-Project-Tic-Tac-Toe.git Press enter and the local repository was created
--The site is published at https://zitabalint.github.io/Second-Milestone-Project-Tic-Tac-Toe/
+- My project was built and it is stored on Github I created a master branch for the project in the following way: Go to your GitHub account and select “New Repository” from the drop down menu Next to the owner after the / add a short name to repository Select add README file and add .gitignore file Create repository
+- If you wish to clone: On GitHub navigate to the main page of the repository Click clone or download green button Click on the copy icon at the end of the https:// link Open the terminal Navigate to the location where the repository is going to be stored With the repository URL enter the following $ git clone https://github.com/ZitaBalint/Second-Milestone-Project-Tic-Tac-Toe.git Press enter and the local repository was created
+- The site is published at https://zitabalint.github.io/Second-Milestone-Project-Tic-Tac-Toe/
 
 
 ## Media and contents of rules and history
