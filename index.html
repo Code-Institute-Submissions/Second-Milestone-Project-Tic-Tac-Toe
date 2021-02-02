@@ -227,14 +227,13 @@
 
         <!-------------The Game------------------------>
         <div class="switch-box container">
-        <div class="turns col-3"><p id="playersTurn"></p></div>
-        
-        <div class="count-down col-3">
-            <h2 id="countDown"></h2>
-        </div>
-       <div class="col-3"> <button class="mute-button"><i class="fas fa-volume-mute fa-3x"></i></button>
-         <button class="sound-button"><i class="fas fa-volume-up fa-3x"></i></button>
+        <div class="col-2"> <button class="mute-button"><i class="fas fa-volume-mute fa-2x"></i></button>
+         <button class="sound-button"><i class="fas fa-volume-up fa-2x"></i></button>
          </div>
+        <div class="turns col-7"><p id="playersTurn"></p></div>
+        
+       
+       
         <div class="col-3"><input class="switch" id="togBtn" type="checkbox">
         <label class="background-switch" for="togBtn">
             <h6>light</h6>
@@ -247,7 +246,11 @@
         <div class="container score-play-container">
             <div class="row score-play-row col-12 no-gutter">
             <div class="col-12 score-container col-sm-4 col-12-copy-container d-flex">
+                
                 <div class="score-box">
+                     <div class="count-down">
+            <h2 id="countDown">0:0</h2>
+        </div>
                     <h3 class="score-header"><span class="score-nameX"></span> vs. <span class="score-nameO"></span></h3>
                     <table class="container table-container">
                         <tr class="score-cloumn">
@@ -264,8 +267,10 @@
                         </tr>
                     </table>
                 </div>
+                
             </div>
             <div class="col-12 col-sm-8 board-game-container d-flex">
+                
         <div class="board-container col-12-copy-container">
             <div class="game-grid" id="gameGrid">
                 <div class="cell" data-cell></div>
