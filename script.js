@@ -114,7 +114,7 @@ function countdown() {
         countdownClock.innerHTML = 'the time is up'
         gameResultText.innerHTML = "Game over! No winner!"
         gameResult.classList.add('show')
-        
+        $(gameResult).show();
     }
     
 };
@@ -198,9 +198,11 @@ $('#rematchButton').on('click', function () {
     $(gameResult).hide();
     cellElements.forEach(function (cell) {
         cell.addEventListener('click', handleClick, { once: true });
+        clearInterval(timer);
     });
     timeLeft = 60; 
     timer = setInterval(countdown, 1000);
+   
     
 });
 
