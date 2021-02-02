@@ -144,6 +144,7 @@ body.black #navbarToggle .nav-link{
     display: flex;
     margin-top: 15px;
     min-height: 50px;
+    margin-bottom: 15px;
 }
 
 .mute-button,
@@ -180,7 +181,7 @@ body.black .turns {
     transform: translateX(54px);
 }
 .background-switch{
-    width: 122px;
+    width: 112px;
     height: 35px;
     float: right;
     
@@ -209,10 +210,10 @@ label .slider{
     background-color: white;
     position: absolute;
     height: 29px;
-    width: 52px;
+    width: 50px;
     border-radius: 5px;
-   
     margin: 3px;
+    margin-left: 6px;
 }
 
 
@@ -257,6 +258,7 @@ body.black .count-down h2 {
     width: 27vmax;
     background-color: white;
     color: black;
+    position: absolute;
     
 }
 
@@ -269,7 +271,7 @@ th, td {
 }
 .score-header {
     border-bottom: 3px solid red;
-    padding: 10% 10% 5%;
+    padding: 10% 5%;
     text-align: center;
 }
 
@@ -280,13 +282,13 @@ th, td {
 }
 
 .player-one {
-    font-size: clamp(12px, 1.5vw, 14px);
+   
     border-bottom: 3px solid red;
     
 }
 
 .player-two {
-    font-size: clamp(12px, 1.5vw, 14px);
+    
     border-bottom: 3px solid red;
 }
 
@@ -410,9 +412,17 @@ body.black .cell.o::after{
 
 .game-result-text {
     padding: 10%;
-    font-size: 5vmax;
+    font-size: 3vmax;
     color: white;
+    text-align: center;
 }
+
+.fa-times,
+.fa-circle-notch {
+    color: red;
+}
+
+
 
 .game-result button {
     margin: 2%;
@@ -450,6 +460,18 @@ footer{
 }
     
 
+@media screen and (max-width: 760px ) {
+    .score-header,
+    .score-cloumn h5{
+        font-size: 1.15rem;
+        margin: 0;
+    }
+
+    tr td {
+        padding: 0.5vw;
+    }
+
+}
 @media screen and ( max-width: 575px ) {
     .score-header,
     .score-cloumn {
@@ -464,4 +486,40 @@ footer{
         height: auto;
     }
     
+}
+
+@media screen and (max-width: 480px) {
+    .score-box {
+        position: relative;
+    }
+
+    .turns {
+        justify-content: left;
+        font-size: 1.2rem;
+    }
+
+    .mute-button,
+    .sound-button {
+        font-size: 85%;
+    }
+
+    .background-switch {
+    width: 90px;
+    height: 28px;
+    }
+
+    .background-switch h6 {
+        padding: 5%;
+    }
+
+    :checked + .background-switch .slider {
+    transform: translateX(44px);
+}
+
+    label .slider{
+    height: 24px;
+    width: 42px;
+    margin: 1px;
+    margin-left: 1px;
+    }
 }
