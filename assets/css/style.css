@@ -258,7 +258,7 @@ body.black .count-down h2 {
     width: 27vmax;
     background-color: white;
     color: black;
-    position: absolute;
+    
     
 }
 
@@ -484,6 +484,7 @@ footer{
 
     .score-box {
         height: auto;
+        position: absolute
     }
     
 }
