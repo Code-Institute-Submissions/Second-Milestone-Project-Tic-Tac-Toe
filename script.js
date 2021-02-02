@@ -24,11 +24,13 @@ let playersSubmitX = document.getElementById('playersSubmitX');
 const soundX = document.getElementById('soundX');
 const soundO = document.getElementById('soundO');
 const winningSound = document.getElementById('winningSound');
+const tieSound = document.getElementById('tieSound');
+const timeIsUp = document.getElementById('timeIsUp');
 const gameSong = document.querySelector('.tic-tac-toe-song');
 const switchBox = document.getElementById('togBtn');
 
 let countdownClock = document.getElementById('countDown');
-let timeLeft = 60
+let timeLeft = 60;
 let timer;
 let startScoreX = 0;
 let startScoreO = 0;
@@ -76,10 +78,17 @@ $('#submitBtn').on('click', function (e) {
         errorMessages.push("Player's name is required");
     }
 
+    if (playerX.value.length >= '7') {
+        errorMessages.push("Player's name max 6 character");
+    } else if (playerO.value.length >= '7') {
+        errorMessages.push("Player's name max 6 character");
+    }
+
     if (errorMessages.length > 0) {
         e.preventDefault();
-        document.getElementById('error').innerText = errorMessages;
+        document.getElementById('error').innerText = errorMessages.join(' , ');
     }
+
     else {
         $('#playersSubmitO').val(playerO.value);
         $('#playersSubmitX').val(playerX.value);
@@ -101,12 +110,13 @@ function countdown() {
     timeLeft--;
 
     if (timeLeft <= 0) {
-        clearInterval(timeLeft = 0)
+        clearInterval(timeLeft = 0);
         countdownClock.innerHTML = 'the time is up'
         gameResultText.innerHTML = "Game over! No winner!"
         gameResult.classList.add('show')
+        
     }
-
+    
 };
 
 
@@ -200,9 +210,9 @@ $('#rematchButton').on('click', function () {
     cellElements.forEach(function (cell) {
         cell.addEventListener('click', handleClick, { once: true });
     });
-    
     timeLeft = 60; 
     timer = setInterval(countdown, 1000);
+    
 });
 
 
@@ -225,12 +235,13 @@ function gameOver(checkTie) {
     if (checkTie) {
         
         gameResultText.innerHTML = "No winner";
-
+        tieSound.play();
     } else if (checkWinner) {
 
         gameResultText.innerHTML = `${circleTurn ? ('<i class="fas fa-circle-notch fa-spin"></i> ' + 'Congrats ' + playersSubmitO.value + '!' + ' <i class="fas fa-circle-notch fa-spin"></i>') : ('<i class="fas fa-times fa-spin"></i> ' + 'Congrats ' + playersSubmitX.value + '!' + ' <i class="fas fa-times fa-spin"></i>')}`;
         winningSound.play();
         setScore();
+
     } else {
 
         gameResultText.innerHTML = "Did you heck the system? &#128561";
