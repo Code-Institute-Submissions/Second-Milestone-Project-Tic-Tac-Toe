@@ -67,9 +67,9 @@ In the event of switching background color from light to dark, the navbar change
 ### Opening page:
 The game opens with a full page cover modal, the modal has a form inside, which is asking the players to submit their names. If the value of the player’s name is empty it comes up with the error message the player's name is required, or if the name is greater than 6 letter it also pops up with an error message saying the player’s name is max 6 characters. On submission, the timer starts and the game begins. 
 
-! [Opening page error message 1](https://res.cloudinary.com/dbwtdwgnt/image/upload/v1612266833/Screenshot_2021-02-02_at_07.30.44_gaasbg.png)
-! [Opening page error message 2](https://res.cloudinary.com/dbwtdwgnt/image/upload/v1612266833/Screenshot_2021-02-02_at_07.30.28_fusg3p.png)
-! [Opening page error message 3](https://res.cloudinary.com/dbwtdwgnt/image/upload/v1612266833/Screenshot_2021-02-02_at_07.30.12_krea6b.png)
+![Opening page error message 1](https://res.cloudinary.com/dbwtdwgnt/image/upload/v1612266833/Screenshot_2021-02-02_at_07.30.44_gaasbg.png)
+![Opening page error message 2](https://res.cloudinary.com/dbwtdwgnt/image/upload/v1612266833/Screenshot_2021-02-02_at_07.30.28_fusg3p.png)
+![Opening page error message 3](https://res.cloudinary.com/dbwtdwgnt/image/upload/v1612266833/Screenshot_2021-02-02_at_07.30.12_krea6b.png)
 
 
 ### Mute button:
