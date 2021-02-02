@@ -1,3 +1,6 @@
+
+/* | | ----------------------------BODY -----------------------------  */
+
 body{
     letter-spacing: 2px;
     font-family: 'NTR', sans-serif;
@@ -5,6 +8,8 @@ body{
 body.black {
     background-color: rgb(0, 0, 0);
 }
+
+/* | | ----------------------------Navbar -----------------------------  */
 
 .navbar{
     background-color: black;
@@ -93,7 +98,7 @@ body.black #navbarToggle .nav-link{
        color: red;
    } 
 
-
+/* | | ----------------------------Sarting page-----------------------------  */
 
 .starting-page-modal {
     background-color: rgba(0, 0, 0, 0.6);
@@ -140,6 +145,8 @@ body.black #navbarToggle .nav-link{
     color: red;
 }
 
+/* | | ----------------------------switch -----------------------------  */
+
 .switch-box {
     display: flex;
     margin-top: 15px;
@@ -154,6 +161,22 @@ body.black #navbarToggle .nav-link{
     display: flex ;
    
 }
+
+body.black .mute-button,
+body.black .sound-button {
+    color: white;
+}
+
+.mute-button:hover,
+.sound-button:hover {
+    color: red;
+}
+
+body.black .mute-button:hover,
+body.black .sound-button:hover {
+    color: red;
+}
+
 
 .turns {
     font-size: calc(1.325rem + .9vw);
@@ -199,7 +222,7 @@ body.black .background-switch{
     background-color: white;
 }
 
-.background-switch h6 {
+.background-switch p {
    margin-bottom: 0;
      color: red;
      padding: 10%;
@@ -230,6 +253,8 @@ body.black label .slider {
 body.black .count-down h2 {
     color: white;
 }
+
+/* | | ----------------------------Score -----------------------------  */
 
 .score-play-container {
     position: relative;
@@ -291,6 +316,8 @@ th, td {
     
     border-bottom: 3px solid red;
 }
+
+/* | | ----------------------------Game -----------------------------  */
 
 .board-game-container {
     align-items: center;
@@ -392,6 +419,8 @@ body.black .cell.o::after{
     background-color: black;
 }
 
+/* | | ----------------------------Result -----------------------------  */
+
 .end-resul {
     display: none;
 }
@@ -434,20 +463,8 @@ body.black .cell.o::after{
 
 
 
-body.black .mute-button,
-body.black .sound-button {
-    color: white;
-}
 
-.mute-button:hover,
-.sound-button:hover {
-    color: red;
-}
-
-body.black .mute-button:hover,
-body.black .sound-button:hover {
-    color: red;
-}
+/* | | ----------------------------Footer -----------------------------  */
 
 footer{
     position: fixed;
@@ -458,12 +475,12 @@ footer{
     height: 30px;
     color: white;
 }
-    
+    /* | | ----------------------------Media -----------------------------  */
 
 @media screen and (max-width: 760px ) {
     .score-header,
-    .score-cloumn h5{
-        font-size: 1.15rem;
+    .score-cloumn p{
+        font-size: 1.2rem;
         margin: 0;
     }
 
@@ -509,7 +526,7 @@ footer{
     height: 28px;
     }
 
-    .background-switch h6 {
+    .background-switch p {
         padding: 5%;
     }
 
