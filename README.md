@@ -155,14 +155,14 @@ The site was tested all the way through, using Chrome dev tools, and made sure e
 My code was also beautified and validated for all html, css and JavaScript in the above mentioned sites. 
 
 ## Assets
-GitHub - used GitPod as an editor
-HTML
-CSS
-jQuery 
-JavaScript
-Bootstrap - partly for modal and partially for the navigation bar
-Font Awesome - Through the pages used font awesome icons for youtube icon next to tic-tac-toe song and on the winning message announcements 
-Google Fonts - Used Google Fonts; NTR
+-GitHub - used GitPod as an editor
+-HTML
+-CSS
+-jQuery 
+-JavaScript
+-Bootstrap - partly for modal and partially for the navigation bar
+-Font Awesome - Through the pages used font awesome icons for youtube icon next to tic-tac-toe song and on the winning message announcements 
+-Google Fonts - Used Google Fonts; NTR
 
 
 ## Credits
@@ -180,15 +180,17 @@ For the audio sounds of winning and tie i used sounds from the [following websit
 To convert the youtube video to mp3 I used the [following website](https://youtubetomp3music.com/en5/) 
 
 ## Deployments
-My project was built and it is stored on Github I created a master branch for the project in the following way: Go to your GitHub account and select “New Repository” from the drop down menu Next to the owner after the / add a short name to repository Select add README file and add .gitignore file Create repository
-If you wish to clone: On GitHub navigate to the main page of the repository Click clone or download green button Click on the copy icon at the end of the https:// link Open the terminal Navigate to the location where the repository is going to be stored With the repository URL enter the following $ git clone Press enter and the local repository was created
+-My project was built and it is stored on Github I created a master branch for the project in the following way: Go to your GitHub account and select “New Repository” from the drop down menu Next to the owner after the / add a short name to repository Select add README file and add .gitignore file Create repository
+-If you wish to clone: On GitHub navigate to the main page of the repository Click clone or download green button Click on the copy icon at the end of the https:// link Open the terminal Navigate to the location where the repository is going to be stored With the repository URL enter the following $ git clone https://github.com/ZitaBalint/Second-Milestone-Project-Tic-Tac-Toe.git Press enter and the local repository was created
+-The site is published at https://zitabalint.github.io/Second-Milestone-Project-Tic-Tac-Toe/
+
 
 ## Media and contents of rules and history
 Following website was used for the [Tic Tac Toe rules](https://www.exploratorium.edu/brain_explorer/tictactoe.html)
 The [following link](https://en.wikipedia.org/wiki/Tic-tac-toe#:~:text=An%20early%20variation%20of%20tic,around%20the%20first%20century%20BC.&text=%22Tic%2Dtac%2Dtoe%22,occurred%20in%20the%2020th%20century.) and part of the information was used for the history modal: 
 I converted the Tic tac toe song from the following [Youtube link]( https://www.youtube.com/watch?v=oOgIl4hZz8A )
 I used [sparke.adobe](https://spark.adobe.com/sp/design/post/urn:aaid:sc:EU:cf654d50-a1ef-4341-8631-3c0c0f7c3fe8) to create the mood board and I used their free imaged on the moodboard. 
-Cloudinary - all pictures were stored in cloudinary 
+[Cloudinary](https://cloudinary.com) - all pictures were stored in cloudinary 
 
 
 ## Contact
