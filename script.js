@@ -120,17 +120,6 @@ function countdown() {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
 //x and o event handler 
 const handleClick = function (e) {
     const cell = e.target;
